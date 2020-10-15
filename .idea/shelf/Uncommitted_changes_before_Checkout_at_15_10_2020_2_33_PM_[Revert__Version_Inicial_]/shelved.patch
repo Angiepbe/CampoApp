@@ -1,0 +1,748 @@
+Index: app/src/main/res/layout/activity_menuprincipal.xml
+===================================================================
+--- app/src/main/res/layout/activity_menuprincipal.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/res/layout/activity_menuprincipal.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,330 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-
+-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:id="@+id/drawer_layout"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    tools:context=".MenuprincipalActivity"
+-    android:fitsSystemWindows="true"
+-    tools:openDrawer="start">
+-
+-
+-    <com.google.android.material.navigation.NavigationView
+-        android:layout_width="wrap_content"
+-        android:layout_height="match_parent"
+-        android:id="@+id/nav_view"
+-        app:headerLayout="@layout/header"
+-        app:menu="@menu/main_menu"
+-        android:layout_gravity="start"/>
+-    
+-    <ScrollView
+-        android:layout_width="match_parent"
+-        android:layout_height="match_parent">
+-
+-    <androidx.constraintlayout.widget.ConstraintLayout
+-        android:layout_width="match_parent"
+-        android:layout_height="match_parent">
+-
+-        <LinearLayout
+-            android:id="@+id/linearLayout"
+-            android:layout_width="366dp"
+-            android:layout_height="179dp"
+-            android:layout_marginStart="16dp"
+-            android:layout_marginLeft="16dp"
+-            android:layout_marginTop="12dp"
+-            android:layout_marginEnd="16dp"
+-            android:layout_marginRight="16dp"
+-            android:orientation="horizontal"
+-            android:padding="10dp"
+-            app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toBottomOf="@+id/textView7">
+-
+-            <androidx.cardview.widget.CardView
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                android:layout_margin="10dp"
+-                android:layout_weight="1"
+-                app:cardElevation="10dp">
+-
+-                <RelativeLayout
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:background="@drawable/fondoverdeclaro">
+-
+-                    <ImageButton
+-                        android:id="@+id/Botonperfil"
+-                        android:layout_width="100dp"
+-                        android:layout_height="80dp"
+-                        android:layout_centerHorizontal="true"
+-                        android:layout_marginTop="15dp"
+-                        android:background="#00FFFFFF"
+-                        android:onClick="Perfil"
+-                        android:scaleType="fitCenter"
+-                        app:srcCompat="@drawable/perfil" />
+-
+-                    <TextView
+-                        android:id="@+id/textView9"
+-                        android:layout_width="wrap_content"
+-                        android:layout_height="wrap_content"
+-                        android:layout_below="@id/Botonperfil"
+-                        android:layout_centerHorizontal="true"
+-                        android:layout_marginTop="10dp"
+-                        android:text="Perfil"
+-                        android:textSize="18sp"
+-                        app:fontFamily="sans-serif-condensed-medium" />
+-                </RelativeLayout>
+-            </androidx.cardview.widget.CardView>
+-
+-            <androidx.cardview.widget.CardView
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                android:layout_margin="10dp"
+-                android:layout_weight="1"
+-                app:cardElevation="10dp">
+-
+-                <RelativeLayout
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:background="@drawable/fondoverdeclaro">
+-
+-                    <ImageButton
+-                        android:id="@+id/imageButton10"
+-                        android:layout_width="100dp"
+-                        android:layout_height="80dp"
+-                        android:layout_centerHorizontal="true"
+-                        android:layout_marginTop="15dp"
+-                        android:background="#00FFFFFF"
+-                        android:onClick="Calendario"
+-                        android:scaleType="fitCenter"
+-                        app:srcCompat="@drawable/calendario" />
+-
+-                    <TextView
+-                        android:id="@+id/textView11"
+-                        android:layout_width="wrap_content"
+-                        android:layout_height="wrap_content"
+-                        android:layout_below="@id/imageButton10"
+-                        android:layout_centerHorizontal="true"
+-                        android:layout_marginTop="10dp"
+-                        android:text="Calendario"
+-                        android:textSize="18sp"
+-                        app:fontFamily="sans-serif-medium" />
+-                </RelativeLayout>
+-            </androidx.cardview.widget.CardView>
+-        </LinearLayout>
+-
+-    <TextView
+-        android:id="@+id/textView7"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="8dp"
+-        android:text="Empieza el Seguimiento de  Producción"
+-        android:textSize="18sp"
+-        android:textStyle="bold|italic"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.494"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+-
+-    <androidx.appcompat.widget.Toolbar
+-        android:id="@+id/toolbar2"
+-        android:layout_width="416dp"
+-        android:layout_height="72dp"
+-        android:background="@drawable/fondoverdeclaro"
+-        android:minHeight="?attr/actionBarSize"
+-        android:theme="?attr/actionBarTheme"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.0"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
+-
+-    <ImageButton
+-        android:id="@+id/imageButton4"
+-        android:layout_width="40dp"
+-        android:layout_height="40dp"
+-        android:layout_marginTop="16dp"
+-        android:background="@drawable/fondoverdeclaro"
+-        app:layout_constraintEnd_toEndOf="@+id/toolbar2"
+-        app:layout_constraintHorizontal_bias="0.047"
+-        app:layout_constraintStart_toStartOf="@+id/toolbar2"
+-        app:layout_constraintTop_toTopOf="parent"
+-        app:srcCompat="@drawable/menu" />
+-
+-        <LinearLayout
+-            android:id="@+id/linearLayout2"
+-            android:layout_width="365dp"
+-            android:layout_height="173dp"
+-            android:layout_marginStart="16dp"
+-            android:layout_marginLeft="16dp"
+-            android:layout_marginEnd="16dp"
+-            android:layout_marginRight="16dp"
+-            android:orientation="horizontal"
+-            android:padding="10dp"
+-            app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+-
+-            <androidx.cardview.widget.CardView
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                android:layout_margin="10dp"
+-                android:layout_weight="1"
+-                app:cardElevation="10dp">
+-
+-                <RelativeLayout
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:background="@drawable/button_border_rounded_">
+-
+-                    <ImageButton
+-                        android:id="@+id/imageButton9"
+-                        android:layout_width="100dp"
+-                        android:layout_height="80dp"
+-                        android:layout_centerHorizontal="true"
+-                        android:layout_marginTop="15dp"
+-                        android:background="@drawable/fondoverdeclaro"
+-                        android:onClick="Relaciones"
+-                        android:scaleType="fitCenter"
+-                        app:srcCompat="@drawable/relaciones" />
+-
+-                    <TextView
+-                        android:id="@+id/textView12"
+-                        android:layout_width="wrap_content"
+-                        android:layout_height="wrap_content"
+-                        android:layout_below="@id/imageButton9"
+-                        android:layout_centerHorizontal="true"
+-                        android:layout_marginTop="10dp"
+-                        android:text="Relaciones"
+-                        android:textSize="18sp"
+-                        app:fontFamily="sans-serif-medium" />
+-                </RelativeLayout>
+-            </androidx.cardview.widget.CardView>
+-
+-            <androidx.cardview.widget.CardView
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                android:layout_margin="10dp"
+-                android:layout_weight="1"
+-                app:cardElevation="10dp">
+-
+-                <RelativeLayout
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:background="@drawable/button_border_rounded_">
+-
+-                    <ImageButton
+-                        android:id="@+id/imageButton11"
+-                        android:layout_width="75dp"
+-                        android:layout_height="75dp"
+-                        android:layout_centerHorizontal="true"
+-                        android:layout_marginTop="15dp"
+-                        android:background="@drawable/fondoverdeclaro"
+-                        android:onClick="AsisVirtual"
+-                        android:scaleType="fitCenter"
+-                        app:srcCompat="@drawable/asistentevirtual" />
+-
+-                    <TextView
+-                        android:id="@+id/textView13"
+-                        android:layout_width="wrap_content"
+-                        android:layout_height="wrap_content"
+-                        android:layout_below="@id/imageButton11"
+-                        android:layout_centerHorizontal="true"
+-                        android:layout_marginTop="10dp"
+-                        android:text="Asistente Virtual"
+-                        android:textSize="18sp"
+-                        app:fontFamily="sans-serif-medium" />
+-                </RelativeLayout>
+-            </androidx.cardview.widget.CardView>
+-        </LinearLayout>
+-
+-        <LinearLayout
+-            android:layout_width="362dp"
+-            android:layout_height="174dp"
+-            android:layout_marginStart="16dp"
+-            android:layout_marginLeft="16dp"
+-            android:layout_marginEnd="16dp"
+-            android:layout_marginRight="16dp"
+-            android:layout_weight="1"
+-            android:orientation="horizontal"
+-            android:padding="10dp"
+-            app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+-
+-            <androidx.cardview.widget.CardView
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                android:layout_margin="10dp"
+-                android:layout_weight="1"
+-                app:cardElevation="10dp">
+-
+-                <RelativeLayout
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:background="@drawable/button_rounded">
+-
+-                    <ImageButton
+-                        android:id="@+id/imageButton12"
+-                        android:layout_width="100dp"
+-                        android:layout_height="80dp"
+-                        android:layout_centerHorizontal="true"
+-                        android:layout_marginTop="15dp"
+-                        android:background="#00FFFFFF"
+-                        android:onClick="Noticias"
+-                        android:scaleType="fitCenter"
+-                        app:srcCompat="@drawable/noticias" />
+-
+-                    <TextView
+-                        android:id="@+id/textView14"
+-                        android:layout_width="wrap_content"
+-                        android:layout_height="wrap_content"
+-                        android:layout_below="@id/imageButton12"
+-                        android:layout_centerHorizontal="true"
+-                        android:layout_marginTop="10dp"
+-                        android:text="Noticias"
+-                        android:textSize="18sp"
+-                        app:fontFamily="sans-serif-medium" />
+-                </RelativeLayout>
+-            </androidx.cardview.widget.CardView>
+-
+-            <androidx.cardview.widget.CardView
+-                android:layout_width="0dp"
+-                android:layout_height="match_parent"
+-                android:layout_margin="10dp"
+-                android:layout_weight="1"
+-                app:cardElevation="10dp">
+-
+-                <RelativeLayout
+-                    android:layout_width="match_parent"
+-                    android:layout_height="match_parent"
+-                    android:background="@drawable/button_rounded">
+-
+-                    <ImageButton
+-                        android:id="@+id/imageButton13"
+-                        android:layout_width="100dp"
+-                        android:layout_height="80dp"
+-                        android:layout_centerHorizontal="true"
+-                        android:layout_marginTop="15dp"
+-                        android:background="#00FFFFFF"
+-                        android:onClick="Tienda"
+-                        android:scaleType="fitCenter"
+-                        app:srcCompat="@drawable/tienda" />
+-
+-                    <TextView
+-                        android:id="@+id/textView15"
+-                        android:layout_width="wrap_content"
+-                        android:layout_height="wrap_content"
+-                        android:layout_below="@id/imageButton13"
+-                        android:layout_centerHorizontal="true"
+-                        android:layout_marginTop="10dp"
+-                        android:text="Tienda"
+-                        android:textSize="18sp"
+-                        app:fontFamily="sans-serif-medium" />
+-                </RelativeLayout>
+-            </androidx.cardview.widget.CardView>
+-        </LinearLayout>
+-    </androidx.constraintlayout.widget.ConstraintLayout>
+-    </ScrollView>
+-</androidx.drawerlayout.widget.DrawerLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/campoapp/MenuprincipalActivity.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/MenuprincipalActivity.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/java/com/example/campoapp/MenuprincipalActivity.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,102 +0,0 @@
+- package com.example.campoapp;
+-
+-import androidx.appcompat.app.ActionBarDrawerToggle;
+-import androidx.appcompat.app.AppCompatActivity;
+-import androidx.drawerlayout.widget.DrawerLayout;
+-
+-import android.content.Intent;
+-import android.net.Uri;
+-import android.os.Bundle;
+-import android.view.View;
+-import android.widget.Toolbar;
+-
+-import com.google.android.material.navigation.NavigationView;
+-
+-import com.google.android.gms.auth.api.signin.GoogleSignIn;
+-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+-
+- public class MenuprincipalActivity extends AppCompatActivity {
+-
+-     DrawerLayout drawerLayout;
+-     NavigationView navigationView;
+-     //Toolbar toolbar;
+-     //private Toolbar supportActionBar;
+-
+-     @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_menuprincipal);
+-        drawerLayout=findViewById(R.id.drawer_layout);
+-        navigationView=findViewById(R.id.nav_view);
+-        //toolbar=findViewById(R.id.toolbar2);
+-
+-
+-        //setSupportActionBar(toolbar);
+-
+-        ActionBarDrawerToggle toggle= new ActionBarDrawerToggle(this, drawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+-        drawerLayout.addDrawerListener(toggle);
+-        toggle.syncState();
+-
+-
+-        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+-        if (acct != null) {
+-            String personName = acct.getDisplayName();
+-            String personGivenName = acct.getGivenName();
+-            String personFamilyName = acct.getFamilyName();
+-            String personEmail = acct.getEmail();
+-            String personId = acct.getId();
+-            Uri personPhoto = acct.getPhotoUrl();
+-
+-        }
+-
+-    }
+-
+-     /*private void setSupportActionBar(Toolbar toolbar2) {
+-     }*/
+-
+-
+-     public void Perfil (View view ){
+-         //Intent perfil= new Intent(this,AsistenteVirtual.class);//Generar instancia entre pantallar
+-         //Envio de info entre pantallas
+-         //startActivity(perfil);//Inicializar objeto
+-     }
+-     public void Calendario (View view ){
+-         //Intent cld= new Intent(this,AsistenteVirtual.class);//Generar instancia entre pantallar
+-         //Envio de info entre pantallas
+-         //startActivity(cld);//Inicializar objeto
+-
+-     }
+-     public void Relaciones (View view ){
+-         //Intent relacion= new Intent(this,AsistenteVirtual.class);//Generar instancia entre pantallar
+-         //Envio de info entre pantallas
+-         //startActivity(relacion);//Inicializar objeto
+-         //Acceso a menuslide
+-         //Intent intencion =new Intent(this,MenuSlideActivity.class);
+-        // startActivity(intencion);
+-     }
+-
+-     public void AsisVirtual (View view ){
+-         Intent siri= new Intent(this,AsistenteVirtual.class);//Generar instancia entre pantallar
+-         //Envio de info entre pantallas
+-         startActivity(siri);//Inicializar objeto
+-         //Intent intencion =new Intent(this,MenuSlideActivity.class);
+-        // startActivity(intencion);
+-     }
+-
+-     public void Noticias (View view ){
+-         //Intent news= new Intent(this,AsistenteVirtual.class);//Generar instancia entre pantallar
+-         //Envio de info entre pantallas
+-         //startActivity(news);//Inicializar objeto
+-
+-     }
+-
+-     public void Tienda (View view ){
+-         //Intent news= new Intent(this,AsistenteVirtual.class);//Generar instancia entre pantallar
+-         //Envio de info entre pantallas
+-         //startActivity(news);//Inicializar objeto
+-
+-     }
+-
+- }
+-
+-
+Index: app/src/main/java/com/example/campoapp/MainActivity.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/MainActivity.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/java/com/example/campoapp/MainActivity.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,72 +0,0 @@
+-package com.example.campoapp;
+-
+-import androidx.annotation.NonNull;
+-import androidx.appcompat.app.AppCompatActivity;
+-
+-import android.content.Intent;
+-import android.os.Bundle;
+-import android.view.View;
+-import android.widget.EditText;
+-import android.widget.Toast;
+-
+-import com.google.android.gms.tasks.OnCompleteListener;
+-import com.google.android.gms.tasks.Task;
+-import com.google.firebase.auth.AuthResult;
+-import com.google.firebase.auth.FirebaseAuth;
+-import com.google.firebase.auth.FirebaseUser;
+-
+-
+-
+-public class MainActivity extends AppCompatActivity {
+-    private FirebaseAuth mAuth;
+-    private EditText email,password;
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_main);
+-        email=(EditText) findViewById(R.id.ETEmail);
+-        password=(EditText) findViewById(R.id.ETPass);
+-        mAuth = FirebaseAuth.getInstance();
+-    }
+-
+-    public void Registrate (View view ){
+-        Intent registrate= new Intent(this,Registro.class);//Generar instancia entre pantallar
+-        //Envio de info entre pantallas
+-        startActivity(registrate);//Inicializar objeto
+-    }
+-
+-    @Override
+-    public void onStart() {
+-        super.onStart();
+-        // Check if user is signed in (non-null) and update UI accordingly.
+-        FirebaseUser currentUser = mAuth.getCurrentUser();
+-       // updateUI(currentUser);
+-    }
+-
+-
+-    public  void IniciarSesion(View view){
+-
+-
+-        mAuth.signInWithEmailAndPassword(email.getText().toString(), password.getText().toString())
+-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+-                    @Override
+-                    public void onComplete(@NonNull Task<AuthResult> task) {
+-                        if (task.isSuccessful()) {
+-                            // Sign in success, update UI with the signed-in user's information
+-                            //Log.d(TAG, "signInWithEmail:success");
+-                            FirebaseUser user = mAuth.getCurrentUser();
+-                            Intent i=new Intent(getApplicationContext(),MenuprincipalActivity.class);
+-                            startActivity(i);
+-                           // updateUI(user);
+-                        } else {
+-                            // If sign in fails, display a message to the user.
+-                            //Log.w(TAG, "signInWithEmail:failure", task.getException());
+-                            Toast.makeText(getApplicationContext(), "Authentication failed.",Toast.LENGTH_SHORT).show();
+-                            //updateUI(null);
+-                        }
+-
+-                        // ...
+-                    }
+-                });
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_main.xml
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/res/layout/activity_main.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,102 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    android:background="@drawable/fondoverdeclaro"
+-    tools:context=".MainActivity" >
+-
+-    <ImageView
+-        android:id="@+id/imageView"
+-        android:layout_width="120dp"
+-        android:layout_height="120dp"
+-        android:layout_marginTop="16dp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.498"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        app:srcCompat="@drawable/logouno" />
+-
+-    <EditText
+-        android:id="@+id/ETEmail"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="20dp"
+-        android:ems="10"
+-        android:hint="@string/Email"
+-        android:inputType="textPersonName"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.497"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+-
+-    <EditText
+-        android:id="@+id/ETPass"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="20dp"
+-        android:ems="10"
+-        android:hint="@string/Contra"
+-        android:inputType="textPassword"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/ETEmail" />
+-
+-    <Button
+-        android:id="@+id/button3"
+-        android:layout_width="239dp"
+-        android:layout_height="54dp"
+-        android:layout_marginTop="12dp"
+-        android:background="@drawable/button_border_rounded_"
+-        android:onClick="Registrate"
+-        android:text="@string/Bregistro"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/button" />
+-
+-    <Button
+-        android:id="@+id/button"
+-        style="@android:style/Widget.Button"
+-        android:layout_width="239dp"
+-        android:layout_height="55dp"
+-        android:layout_marginTop="20dp"
+-        android:background="@drawable/button_rounded"
+-        android:onClick="IniciarSesion"
+-        android:text="@string/Blogin"
+-        android:textColor="@android:color/background_light"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/ETPass" />
+-
+-    <ImageButton
+-        android:id="@+id/imageButton6"
+-        android:layout_width="50dp"
+-        android:layout_height="50dp"
+-        android:layout_marginTop="24dp"
+-        android:layout_marginEnd="100dp"
+-        android:layout_marginRight="100dp"
+-        android:background="@drawable/fondoverdeclaro"
+-        android:scaleType="fitCenter"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/button3"
+-        app:layout_constraintVertical_bias="0.0"
+-        app:srcCompat="@drawable/gmail" />
+-
+-    <ImageButton
+-        android:id="@+id/imageButton5"
+-        android:layout_width="50dp"
+-        android:layout_height="50dp"
+-        android:layout_marginStart="124dp"
+-        android:layout_marginLeft="124dp"
+-        android:layout_marginTop="24dp"
+-        android:background="@drawable/fondoverdeclaro"
+-        android:scaleType="fitCenter"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/button3"
+-        app:layout_constraintVertical_bias="0.0"
+-        app:srcCompat="@drawable/facebook" />
+-
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: gradle/wrapper/gradle-wrapper.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#Thu Oct 15 10:01:31 COT 2020\r\ndistributionBase=GRADLE_USER_HOME\r\ndistributionPath=wrapper/dists\r\nzipStoreBase=GRADLE_USER_HOME\r\nzipStorePath=wrapper/dists\r\ndistributionUrl=https\\://services.gradle.org/distributions/gradle-6.5-all.zip\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- gradle/wrapper/gradle-wrapper.properties	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ gradle/wrapper/gradle-wrapper.properties	(date 1602790254077)
+@@ -1,6 +1,6 @@
+-#Thu Oct 15 10:01:31 COT 2020
++#Sun Oct 11 00:04:51 COT 2020
+ distributionBase=GRADLE_USER_HOME
+ distributionPath=wrapper/dists
+ zipStoreBase=GRADLE_USER_HOME
+ zipStorePath=wrapper/dists
+-distributionUrl=https\://services.gradle.org/distributions/gradle-6.5-all.zip
++distributionUrl=https\://services.gradle.org/distributions/gradle-6.1.1-all.zip
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>apply plugin: 'com.android.application'\r\napply plugin: 'com.google.gms.google-services'\r\n\r\nandroid {\r\n    compileSdkVersion 30\r\n    buildToolsVersion \"30.0.2\"\r\n\r\n    defaultConfig {\r\n        applicationId \"com.example.campoapp\"\r\n        minSdkVersion 16\r\n        targetSdkVersion 30\r\n        versionCode 1\r\n        versionName \"1.0\"\r\n\r\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            minifyEnabled false\r\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\r\n        }\r\n    }\r\n}\r\n\r\ndependencies {\r\n    implementation fileTree(dir: \"libs\", include: [\"*.jar\"])\r\n    implementation 'androidx.appcompat:appcompat:1.2.0'\r\n    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'\r\n    implementation 'androidx.legacy:legacy-support-v4:1.0.0'\r\n    implementation 'com.google.android.material:material:1.0.0'\r\n    implementation 'androidx.navigation:navigation-fragment:2.1.0'\r\n    implementation 'androidx.navigation:navigation-ui:2.1.0'\r\n    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'\r\n    implementation 'com.firebaseui:firebase-ui-auth:6.1.0'\r\n    implementation 'com.google.firebase:firebase-auth:19.4.0'\r\n    implementation 'androidx.annotation:annotation:1.1.0'\r\n    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'\r\n    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'\r\n    testImplementation 'junit:junit:4.12'\r\n    androidTestImplementation 'androidx.test.ext:junit:1.1.2'\r\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/build.gradle	(date 1602790350943)
+@@ -1,5 +1,4 @@
+ apply plugin: 'com.android.application'
+-apply plugin: 'com.google.gms.google-services'
+ 
+ android {
+     compileSdkVersion 30
+@@ -7,7 +6,7 @@
+ 
+     defaultConfig {
+         applicationId "com.example.campoapp"
+-        minSdkVersion 16
++        minSdkVersion 14
+         targetSdkVersion 30
+         versionCode 1
+         versionName "1.0"
+@@ -32,11 +31,6 @@
+     implementation 'androidx.navigation:navigation-fragment:2.1.0'
+     implementation 'androidx.navigation:navigation-ui:2.1.0'
+     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+-    implementation 'com.firebaseui:firebase-ui-auth:6.1.0'
+-    implementation 'com.google.firebase:firebase-auth:19.4.0'
+-    implementation 'androidx.annotation:annotation:1.1.0'
+-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+     testImplementation 'junit:junit:4.12'
+     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CMakeSettings\">\r\n    <configurations>\r\n      <configuration PROFILE_NAME=\"Debug\" CONFIG_NAME=\"Debug\" />\r\n    </configurations>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_1_8\" default=\"true\" project-jdk-name=\"1.8\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ .idea/misc.xml	(date 1602790255186)
+@@ -5,7 +5,7 @@
+       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+     </configurations>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    package=\"com.example.campoapp\">\r\n\r\n    <uses-permission android:name=\"android.permission.INTERNET\" />\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.AppCompat.DayNight.NoActionBar\">\r\n        <activity\r\n            android:name=\".ui.login.LoginActivity\"\r\n            android:label=\"@string/title_activity_login\"></activity>\r\n        <activity android:name=\".MenuprincipalActivity\" />\r\n        <activity android:name=\".AsistenteVirtual\" />\r\n        <activity\r\n            android:name=\".MenuSlideActivity\"\r\n            android:label=\"@string/title_activity_menu_slide\"\r\n            android:theme=\"@style/NoActionBar\" />\r\n        <activity android:name=\".Registro\" />\r\n        <activity android:name=\".MainActivity\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/AndroidManifest.xml	(date 1602790350616)
+@@ -2,8 +2,6 @@
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+     package="com.example.campoapp">
+ 
+-    <uses-permission android:name="android.permission.INTERNET" />
+-
+     <application
+         android:allowBackup="true"
+         android:icon="@mipmap/ic_launcher"
+@@ -11,10 +9,7 @@
+         android:roundIcon="@mipmap/ic_launcher_round"
+         android:supportsRtl="true"
+         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+-        <activity
+-            android:name=".ui.login.LoginActivity"
+-            android:label="@string/title_activity_login"></activity>
+-        <activity android:name=".MenuprincipalActivity" />
++        <activity android:name=".MenuprincipalActivity"></activity>
+         <activity android:name=".AsistenteVirtual" />
+         <activity
+             android:name=".MenuSlideActivity"
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// Top-level build file where you can add configuration options common to all sub-projects/modules.\r\nbuildscript {\r\n    repositories {\r\n        google()\r\n        jcenter()\r\n    }\r\n    dependencies {\r\n        classpath 'com.android.tools.build:gradle:4.1.0'\r\n        classpath 'com.google.gms:google-services:4.3.3'\r\n\r\n        // NOTE: Do not place your application dependencies here; they belong\r\n        // in the individual module build.gradle files\r\n    }\r\n}\r\n\r\nallprojects {\r\n    repositories {\r\n        google()\r\n        jcenter()\r\n    }\r\n}\r\n\r\ntask clean(type: Delete) {\r\n    delete rootProject.buildDir\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- build.gradle	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ build.gradle	(date 1602790351224)
+@@ -6,7 +6,6 @@
+     }
+     dependencies {
+         classpath 'com.android.tools.build:gradle:4.1.0'
+-        classpath 'com.google.gms:google-services:4.3.3'
+ 
+         // NOTE: Do not place your application dependencies here; they belong
+         // in the individual module build.gradle files

@@ -1,0 +1,3518 @@
+Index: app/.gitignore
+===================================================================
+--- app/.gitignore	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/.gitignore	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,1 +0,0 @@
+-/build
+\ No newline at end of file
+Index: app/src/main/res/drawable-v21/ic_menu_gallery.xml
+===================================================================
+--- app/src/main/res/drawable-v21/ic_menu_gallery.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/res/drawable-v21/ic_menu_gallery.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,9 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="24dp"
+-    android:height="24dp"
+-    android:viewportWidth="24.0"
+-    android:viewportHeight="24.0">
+-    <path
+-        android:fillColor="#FF000000"
+-        android:pathData="M22,16V4c0,-1.1 -0.9,-2 -2,-2H8c-1.1,0 -2,0.9 -2,2v12c0,1.1 0.9,2 2,2h12c1.1,0 2,-0.9 2,-2zm-11,-4l2.03,2.71L16,11l4,5H8l3,-4zM2,6v14c0,1.1 0.9,2 2,2h14v-2H4V6H2z" />
+-</vector>
+Index: app/src/main/res/layout/activity_asistente_virtual.xml
+===================================================================
+--- app/src/main/res/layout/activity_asistente_virtual.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/res/layout/activity_asistente_virtual.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,106 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    android:background="#DAE475"
+-    tools:context=".AsistenteVirtual">
+-
+-    <ImageView
+-        android:id="@+id/imageView3"
+-        android:layout_width="120dp"
+-        android:layout_height="120dp"
+-        android:layout_marginTop="16dp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.498"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        app:srcCompat="@drawable/asistentevirtual" />
+-
+-    <androidx.cardview.widget.CardView
+-        android:id="@+id/cardView2"
+-        android:layout_width="316dp"
+-        android:layout_height="117dp"
+-        android:layout_marginStart="50dp"
+-        android:layout_marginLeft="50dp"
+-        android:layout_marginTop="16dp"
+-        android:layout_marginEnd="50dp"
+-        android:layout_marginRight="50dp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+-
+-        <LinearLayout
+-            android:layout_width="match_parent"
+-            android:layout_height="match_parent"
+-            android:orientation="vertical">
+-
+-            <TextView
+-                android:id="@+id/textView10"
+-                android:layout_width="match_parent"
+-                android:layout_height="50dp"
+-                android:padding="10dp"
+-                android:text="Escuchando"
+-                android:textColor="@color/cardview_dark_background" />
+-
+-            <TextView
+-                android:id="@+id/tvEscuhado"
+-                android:layout_width="match_parent"
+-                android:layout_height="67dp"
+-                android:padding="10dp"
+-                tools:text="@string/Escuchar" />
+-        </LinearLayout>
+-
+-    </androidx.cardview.widget.CardView>
+-
+-    <androidx.cardview.widget.CardView
+-        android:id="@+id/cardView"
+-        android:layout_width="314dp"
+-        android:layout_height="122dp"
+-        android:layout_marginStart="90dp"
+-        android:layout_marginLeft="90dp"
+-        android:layout_marginTop="16dp"
+-        android:layout_marginEnd="50dp"
+-        android:layout_marginRight="50dp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.769"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+-
+-        <LinearLayout
+-            android:layout_width="match_parent"
+-            android:layout_height="match_parent"
+-            android:orientation="vertical">
+-
+-            <TextView
+-                android:id="@+id/textView8"
+-                android:layout_width="match_parent"
+-                android:layout_height="50dp"
+-                android:padding="10dp"
+-                android:text="Respondiendo"
+-                android:textColor="@color/cardview_dark_background" />
+-
+-            <TextView
+-                android:id="@+id/TvRespondiendo"
+-                android:layout_width="match_parent"
+-                android:layout_height="67dp"
+-                android:padding="10dp"
+-                tools:text="@string/Responder" />
+-        </LinearLayout>
+-    </androidx.cardview.widget.CardView>
+-
+-    <ImageButton
+-        android:id="@+id/imageButton"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="20dp"
+-        android:background="#CDDC39"
+-        android:onClick="Hablar"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.498"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/cardView"
+-        app:srcCompat="@drawable/siri" />
+-
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+===================================================================
+--- app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,5 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+-    <background android:drawable="@drawable/ic_launcher_background" />
+-    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+-</adaptive-icon>
+\ No newline at end of file
+Index: app/src/main/java/com/example/campoapp/ui/home/HomeFragment.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/ui/home/HomeFragment.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/java/com/example/campoapp/ui/home/HomeFragment.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,35 +0,0 @@
+-package com.example.campoapp.ui.home;
+-
+-import android.os.Bundle;
+-import android.view.LayoutInflater;
+-import android.view.View;
+-import android.view.ViewGroup;
+-import android.widget.TextView;
+-
+-import androidx.annotation.NonNull;
+-import androidx.annotation.Nullable;
+-import androidx.fragment.app.Fragment;
+-import androidx.lifecycle.Observer;
+-import androidx.lifecycle.ViewModelProviders;
+-
+-import com.example.campoapp.R;
+-
+-public class HomeFragment extends Fragment {
+-
+-    private HomeViewModel homeViewModel;
+-
+-    public View onCreateView(@NonNull LayoutInflater inflater,
+-                             ViewGroup container, Bundle savedInstanceState) {
+-        homeViewModel =
+-                ViewModelProviders.of(this).get(HomeViewModel.class);
+-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+-        final TextView textView = root.findViewById(R.id.text_home);
+-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+-            @Override
+-            public void onChanged(@Nullable String s) {
+-                textView.setText(s);
+-            }
+-        });
+-        return root;
+-    }
+-}
+\ No newline at end of file
+Index: app/src/test/java/com/example/campoapp/ExampleUnitTest.java
+===================================================================
+--- app/src/test/java/com/example/campoapp/ExampleUnitTest.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/test/java/com/example/campoapp/ExampleUnitTest.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,17 +0,0 @@
+-package com.example.campoapp;
+-
+-import org.junit.Test;
+-
+-import static org.junit.Assert.*;
+-
+-/**
+- * Example local unit test, which will execute on the development machine (host).
+- *
+- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
+- */
+-public class ExampleUnitTest {
+-    @Test
+-    public void addition_isCorrect() {
+-        assertEquals(4, 2 + 2);
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/res/drawable/ic_launcher_background.xml
+===================================================================
+--- app/src/main/res/drawable/ic_launcher_background.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/res/drawable/ic_launcher_background.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,170 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="108dp"
+-    android:height="108dp"
+-    android:viewportWidth="108"
+-    android:viewportHeight="108">
+-    <path
+-        android:fillColor="#3DDC84"
+-        android:pathData="M0,0h108v108h-108z" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M9,0L9,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,0L19,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M29,0L29,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M39,0L39,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M49,0L49,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M59,0L59,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M69,0L69,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M79,0L79,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M89,0L89,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M99,0L99,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,9L108,9"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,19L108,19"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,29L108,29"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,39L108,39"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,49L108,49"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,59L108,59"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,69L108,69"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,79L108,79"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,89L108,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,99L108,99"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,29L89,29"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,39L89,39"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,49L89,49"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,59L89,59"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,69L89,69"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,79L89,79"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M29,19L29,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M39,19L39,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M49,19L49,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M59,19L59,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M69,19L69,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M79,19L79,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-</vector>
+Index: app/src/main/res/values/colors.xml
+===================================================================
+--- app/src/main/res/values/colors.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/res/values/colors.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<resources>
+-    <color name="colorPrimary">#6200EE</color>
+-    <color name="colorPrimaryDark">#3700B3</color>
+-    <color name="colorAccent">#03DAC5</color>
+-</resources>
+\ No newline at end of file
+Index: app/src/main/res/drawable/side_nav_bar.xml
+===================================================================
+--- app/src/main/res/drawable/side_nav_bar.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/res/drawable/side_nav_bar.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,9 +0,0 @@
+-<shape xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:shape="rectangle">
+-    <gradient
+-        android:angle="135"
+-        android:centerColor="#009688"
+-        android:endColor="#00695C"
+-        android:startColor="#4DB6AC"
+-        android:type="linear" />
+-</shape>
+\ No newline at end of file
+Index: app/src/main/res/values/dimens.xml
+===================================================================
+--- app/src/main/res/values/dimens.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/res/values/dimens.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,8 +0,0 @@
+-<resources>
+-    <!-- Default screen margins, per the Android Design guidelines. -->
+-    <dimen name="activity_horizontal_margin">16dp</dimen>
+-    <dimen name="activity_vertical_margin">16dp</dimen>
+-    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+-    <dimen name="nav_header_height">176dp</dimen>
+-    <dimen name="fab_margin">16dp</dimen>
+-</resources>
+\ No newline at end of file
+Index: app/src/main/res/values/styles.xml
+===================================================================
+--- app/src/main/res/values/styles.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/res/values/styles.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,19 +0,0 @@
+-<resources>
+-    <!-- Base application theme. -->
+-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+-        <!-- Customize your theme here. -->
+-        <item name="colorPrimary">@color/colorPrimary</item>
+-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+-        <item name="colorAccent">@color/colorAccent</item>
+-    </style>
+-
+-    <style name="NoActionBar">
+-        <item name="windowActionBar">false</item>
+-        <item name="windowNoTitle">true</item>
+-    </style>
+-
+-    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+-
+-    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+-
+-</resources>
+\ No newline at end of file
+Index: app/proguard-rules.pro
+===================================================================
+--- app/proguard-rules.pro	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/proguard-rules.pro	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,21 +0,0 @@
+-# Add project specific ProGuard rules here.
+-# You can control the set of applied configuration files using the
+-# proguardFiles setting in build.gradle.
+-#
+-# For more details, see
+-#   http://developer.android.com/guide/developing/tools/proguard.html
+-
+-# If your project uses WebView with JS, uncomment the following
+-# and specify the fully qualified class name to the JavaScript interface
+-# class:
+-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+-#   public *;
+-#}
+-
+-# Uncomment this to preserve the line number information for
+-# debugging stack traces.
+-#-keepattributes SourceFile,LineNumberTable
+-
+-# If you keep the line number information, uncomment this to
+-# hide the original source file name.
+-#-renamesourcefileattribute SourceFile
+\ No newline at end of file
+Index: app/src/main/java/com/example/campoapp/MenuSlideActivity.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/MenuSlideActivity.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/java/com/example/campoapp/MenuSlideActivity.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,63 +0,0 @@
+-package com.example.campoapp;
+-
+-import android.os.Bundle;
+-import android.view.View;
+-import android.view.Menu;
+-
+-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+-import com.google.android.material.snackbar.Snackbar;
+-import com.google.android.material.navigation.NavigationView;
+-
+-import androidx.navigation.NavController;
+-import androidx.navigation.Navigation;
+-import androidx.navigation.ui.AppBarConfiguration;
+-import androidx.navigation.ui.NavigationUI;
+-import androidx.drawerlayout.widget.DrawerLayout;
+-import androidx.appcompat.app.AppCompatActivity;
+-import androidx.appcompat.widget.Toolbar;
+-
+-public class MenuSlideActivity extends AppCompatActivity {
+-
+-    private AppBarConfiguration mAppBarConfiguration;
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_menu_slide);
+-        Toolbar toolbar = findViewById(R.id.toolbar);
+-        setSupportActionBar(toolbar);
+-        FloatingActionButton fab = findViewById(R.id.fab);
+-        fab.setOnClickListener(new View.OnClickListener() {
+-            @Override
+-            public void onClick(View view) {
+-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+-                        .setAction("Action", null).show();
+-            }
+-        });
+-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+-        NavigationView navigationView = findViewById(R.id.nav_view);
+-        // Passing each menu ID as a set of Ids because each
+-        // menu should be considered as top level destinations.
+-        mAppBarConfiguration = new AppBarConfiguration.Builder(
+-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+-                .setDrawerLayout(drawer)
+-                .build();
+-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+-        NavigationUI.setupWithNavController(navigationView, navController);
+-    }
+-
+-    @Override
+-    public boolean onCreateOptionsMenu(Menu menu) {
+-        // Inflate the menu; this adds items to the action bar if it is present.
+-        getMenuInflater().inflate(R.menu.menu_slide, menu);
+-        return true;
+-    }
+-
+-    @Override
+-    public boolean onSupportNavigateUp() {
+-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+-        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
+-                || super.onSupportNavigateUp();
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/java/com/example/campoapp/ui/gallery/GalleryFragment.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/ui/gallery/GalleryFragment.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/java/com/example/campoapp/ui/gallery/GalleryFragment.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,35 +0,0 @@
+-package com.example.campoapp.ui.gallery;
+-
+-import android.os.Bundle;
+-import android.view.LayoutInflater;
+-import android.view.View;
+-import android.view.ViewGroup;
+-import android.widget.TextView;
+-
+-import androidx.annotation.NonNull;
+-import androidx.annotation.Nullable;
+-import androidx.fragment.app.Fragment;
+-import androidx.lifecycle.Observer;
+-import androidx.lifecycle.ViewModelProviders;
+-
+-import com.example.campoapp.R;
+-
+-public class GalleryFragment extends Fragment {
+-
+-    private GalleryViewModel galleryViewModel;
+-
+-    public View onCreateView(@NonNull LayoutInflater inflater,
+-                             ViewGroup container, Bundle savedInstanceState) {
+-        galleryViewModel =
+-                ViewModelProviders.of(this).get(GalleryViewModel.class);
+-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
+-        final TextView textView = root.findViewById(R.id.text_gallery);
+-        galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+-            @Override
+-            public void onChanged(@Nullable String s) {
+-                textView.setText(s);
+-            }
+-        });
+-        return root;
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/res/values/drawables.xml
+===================================================================
+--- app/src/main/res/values/drawables.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/res/values/drawables.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,8 +0,0 @@
+-<resources xmlns:android="http://schemas.android.com/apk/res/android">
+-    <item name="ic_menu_camera" type="drawable">@android:drawable/ic_menu_camera</item>
+-    <item name="ic_menu_gallery" type="drawable">@android:drawable/ic_menu_gallery</item>
+-    <item name="ic_menu_slideshow" type="drawable">@android:drawable/ic_menu_slideshow</item>
+-    <item name="ic_menu_manage" type="drawable">@android:drawable/ic_menu_manage</item>
+-    <item name="ic_menu_share" type="drawable">@android:drawable/ic_menu_share</item>
+-    <item name="ic_menu_send" type="drawable">@android:drawable/ic_menu_send</item>
+-</resources>
+\ No newline at end of file
+Index: app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+===================================================================
+--- app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,5 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+-    <background android:drawable="@drawable/ic_launcher_background" />
+-    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+-</adaptive-icon>
+\ No newline at end of file
+Index: app/src/main/res/drawable-v21/ic_menu_slideshow.xml
+===================================================================
+--- app/src/main/res/drawable-v21/ic_menu_slideshow.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/res/drawable-v21/ic_menu_slideshow.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,9 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="24dp"
+-    android:height="24dp"
+-    android:viewportWidth="24.0"
+-    android:viewportHeight="24.0">
+-    <path
+-        android:fillColor="#FF000000"
+-        android:pathData="M4,6H2v14c0,1.1 0.9,2 2,2h14v-2H4V6zm16,-4H8c-1.1,0 -2,0.9 -2,2v12c0,1.1 0.9,2 2,2h12c1.1,0 2,-0.9 2,-2V4c0,-1.1 -0.9,-2 -2,-2zm-8,12.5v-9l6,4.5 -6,4.5z" />
+-</vector>
+Index: app/src/main/java/com/example/campoapp/AsistenteVirtual.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/AsistenteVirtual.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/java/com/example/campoapp/AsistenteVirtual.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,102 +0,0 @@
+-package com.example.campoapp;
+-
+-import androidx.annotation.Nullable;
+-import androidx.appcompat.app.AppCompatActivity;
+-
+-import android.content.Intent;
+-import android.os.Build;
+-import android.os.Bundle;
+-import android.speech.RecognizerIntent;
+-import android.speech.tts.TextToSpeech;
+-import android.view.View;
+-import android.widget.TextView;
+-
+-import java.text.Normalizer;
+-import java.util.ArrayList;
+-
+-public class AsistenteVirtual extends AppCompatActivity implements TextToSpeech.OnInitListener {
+-
+-    private static final int RECONOCEDOR_VOZ = 7;
+-    private TextView escuchando;
+-    private TextView responder;
+-    private ArrayList<Respuesta> respuestas;
+-    private TextToSpeech leerV;
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_asistente_virtual);
+-        escuchando=(TextView) findViewById(R.id.tvEscuhado);
+-        responder=(TextView) findViewById(R.id.TvRespondiendo);
+-        respuestas=proveerDatos();
+-        leerV=new TextToSpeech(this,this);
+-    }
+-
+-    @Override
+-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+-        super.onActivityResult(requestCode, resultCode, data);
+-
+-        //Evaluar si el resultado es el correcto
+-
+-        if(resultCode==RESULT_OK && requestCode==RECONOCEDOR_VOZ){
+-            ArrayList<String> reconocido= data.getStringArrayListExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL);//Almacenando el dato
+-            String escuchado=reconocido.get(0);
+-            escuchando.setText(escuchado);
+-            prepararRespuesta(escuchado);
+-        }
+-    }
+-
+-    public void Hablar (View view ){
+-        Intent hablar =new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+-        hablar.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,"es-MX");
+-        startActivityForResult(hablar,RECONOCEDOR_VOZ);
+-    }
+-
+-    public void prepararRespuesta (String escuchado){
+-        //Normalizar texto
+-        String normalizar= Normalizer.normalize(escuchado,Normalizer.Form.NFD);
+-        String sintilde = normalizar.replaceAll("[^\\p{ASCII}]","");
+-
+-        int res;
+-        String responder = respuestas.get(0).getRespuesta();
+-
+-        //Recorrer array
+-        for (int i=0;i<respuestas.size();i++){
+-            //Buscar posicion
+-            res=sintilde.toLowerCase().indexOf(respuestas.get(1).getCuestion());
+-
+-            if(res!=1){
+-                responder= respuestas.get(i).getRespuesta();
+-
+-            }
+-        }
+-        Responder(responder);
+-
+-    }
+-
+-    private void Responder(String respuestita) {
+-        responder.setText(respuestita);
+-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+-            leerV.speak(respuestita,TextToSpeech.QUEUE_FLUSH,null,null);
+-        }else{
+-            leerV.speak(respuestita,TextToSpeech.QUEUE_FLUSH,null);
+-        }
+-
+-
+-    }
+-
+-    public ArrayList<Respuesta> proveerDatos(){
+-        ArrayList<Respuesta> respuesta = new ArrayList<>();
+-        respuesta.add(new Respuesta ("defecto","Aun no estoy programada para responder eso"));
+-        respuesta.add(new Respuesta ("hola","Hola, ¿Que tal?"));
+-        respuesta.add(new Respuesta ("informacion","Nececitas información acerca de un producto"));
+-        respuesta.add(new Respuesta ("como estas","Bien, ¿En que te puedo colaborar?"));
+-        return respuesta;
+-    }
+-
+-
+-    @Override
+-    public void onInit(int i) {
+-
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/res/drawable/button_rounded.xml
+===================================================================
+--- app/src/main/res/drawable/button_rounded.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/res/drawable/button_rounded.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<shape xmlns:android="http://schemas.android.com/apk/res/android">
+-    <corners android:radius="16dp"/>
+-    <solid android:color="@android:color/holo_green_dark"/>
+-
+-</shape>
+\ No newline at end of file
+Index: app/src/main/java/com/example/campoapp/Respuesta.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/Respuesta.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/java/com/example/campoapp/Respuesta.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,21 +0,0 @@
+-package com.example.campoapp;
+-
+-public class Respuesta {
+-    private String cuestion, respuesta;
+-
+-    public Respuesta() {
+-    }
+-
+-    public Respuesta(String cuestion, String respuesta) {
+-        this.cuestion = cuestion;
+-        this.respuesta = respuesta;
+-    }
+-
+-    public String getCuestion() {
+-        return cuestion;
+-    }
+-
+-    public String getRespuesta() {
+-        return respuesta;
+-    }
+-}
+Index: app/src/main/res/drawable/button_border_rounded_.xml
+===================================================================
+--- app/src/main/res/drawable/button_border_rounded_.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/res/drawable/button_border_rounded_.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,9 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<shape xmlns:android="http://schemas.android.com/apk/res/android">
+-    <corners android:radius="16dp"/>
+-    <solid android:color="@android:color/white"/>
+-    <stroke
+-          android:width="2dp"
+-        android:color="@android:color/holo_green_dark"/>
+-
+-</shape>
+\ No newline at end of file
+Index: app/src/main/res/drawable-v21/ic_menu_camera.xml
+===================================================================
+--- app/src/main/res/drawable-v21/ic_menu_camera.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/res/drawable-v21/ic_menu_camera.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,12 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="24dp"
+-    android:height="24dp"
+-    android:viewportWidth="24.0"
+-    android:viewportHeight="24.0">
+-    <path
+-        android:fillColor="#FF000000"
+-        android:pathData="M12,12m-3.2,0a3.2,3.2 0,1 1,6.4 0a3.2,3.2 0,1 1,-6.4 0" />
+-    <path
+-        android:fillColor="#FF000000"
+-        android:pathData="M9,2L7.17,4H4c-1.1,0 -2,0.9 -2,2v12c0,1.1 0.9,2 2,2h16c1.1,0 2,-0.9 2,-2V6c0,-1.1 -0.9,-2 -2,-2h-3.17L15,2H9zm3,15c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5z" />
+-</vector>
+Index: app/src/main/res/navigation/mobile_navigation.xml
+===================================================================
+--- app/src/main/res/navigation/mobile_navigation.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/res/navigation/mobile_navigation.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,25 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:id="@+id/mobile_navigation"
+-    app:startDestination="@+id/nav_home">
+-
+-    <fragment
+-        android:id="@+id/nav_home"
+-        android:name="com.example.campoapp.ui.home.HomeFragment"
+-        android:label="@string/menu_home"
+-        tools:layout="@layout/fragment_home" />
+-
+-    <fragment
+-        android:id="@+id/nav_gallery"
+-        android:name="com.example.campoapp.ui.gallery.GalleryFragment"
+-        android:label="@string/menu_gallery"
+-        tools:layout="@layout/fragment_gallery" />
+-
+-    <fragment
+-        android:id="@+id/nav_slideshow"
+-        android:name="com.example.campoapp.ui.slideshow.SlideshowFragment"
+-        android:label="@string/menu_slideshow"
+-        tools:layout="@layout/fragment_slideshow" />
+-</navigation>
+\ No newline at end of file
+Index: app/src/androidTest/java/com/example/campoapp/ExampleInstrumentedTest.java
+===================================================================
+--- app/src/androidTest/java/com/example/campoapp/ExampleInstrumentedTest.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/androidTest/java/com/example/campoapp/ExampleInstrumentedTest.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,26 +0,0 @@
+-package com.example.campoapp;
+-
+-import android.content.Context;
+-
+-import androidx.test.platform.app.InstrumentationRegistry;
+-import androidx.test.ext.junit.runners.AndroidJUnit4;
+-
+-import org.junit.Test;
+-import org.junit.runner.RunWith;
+-
+-import static org.junit.Assert.*;
+-
+-/**
+- * Instrumented test, which will execute on an Android device.
+- *
+- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
+- */
+-@RunWith(AndroidJUnit4.class)
+-public class ExampleInstrumentedTest {
+-    @Test
+-    public void useAppContext() {
+-        // Context of the app under test.
+-        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
+-        assertEquals("com.example.campoapp", appContext.getPackageName());
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/java/com/example/campoapp/ui/slideshow/SlideshowFragment.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/ui/slideshow/SlideshowFragment.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/java/com/example/campoapp/ui/slideshow/SlideshowFragment.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,35 +0,0 @@
+-package com.example.campoapp.ui.slideshow;
+-
+-import android.os.Bundle;
+-import android.view.LayoutInflater;
+-import android.view.View;
+-import android.view.ViewGroup;
+-import android.widget.TextView;
+-
+-import androidx.annotation.NonNull;
+-import androidx.annotation.Nullable;
+-import androidx.fragment.app.Fragment;
+-import androidx.lifecycle.Observer;
+-import androidx.lifecycle.ViewModelProviders;
+-
+-import com.example.campoapp.R;
+-
+-public class SlideshowFragment extends Fragment {
+-
+-    private SlideshowViewModel slideshowViewModel;
+-
+-    public View onCreateView(@NonNull LayoutInflater inflater,
+-                             ViewGroup container, Bundle savedInstanceState) {
+-        slideshowViewModel =
+-                ViewModelProviders.of(this).get(SlideshowViewModel.class);
+-        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
+-        final TextView textView = root.findViewById(R.id.text_slideshow);
+-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+-            @Override
+-            public void onChanged(@Nullable String s) {
+-                textView.setText(s);
+-            }
+-        });
+-        return root;
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/java/com/example/campoapp/ui/home/HomeViewModel.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/ui/home/HomeViewModel.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/java/com/example/campoapp/ui/home/HomeViewModel.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,19 +0,0 @@
+-package com.example.campoapp.ui.home;
+-
+-import androidx.lifecycle.LiveData;
+-import androidx.lifecycle.MutableLiveData;
+-import androidx.lifecycle.ViewModel;
+-
+-public class HomeViewModel extends ViewModel {
+-
+-    private MutableLiveData<String> mText;
+-
+-    public HomeViewModel() {
+-        mText = new MutableLiveData<>();
+-        mText.setValue("This is home fragment");
+-    }
+-
+-    public LiveData<String> getText() {
+-        return mText;
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/res/drawable-v24/ic_launcher_foreground.xml
+===================================================================
+--- app/src/main/res/drawable-v24/ic_launcher_foreground.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/res/drawable-v24/ic_launcher_foreground.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,30 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:aapt="http://schemas.android.com/aapt"
+-    android:width="108dp"
+-    android:height="108dp"
+-    android:viewportWidth="108"
+-    android:viewportHeight="108">
+-    <path android:pathData="M31,63.928c0,0 6.4,-11 12.1,-13.1c7.2,-2.6 26,-1.4 26,-1.4l38.1,38.1L107,108.928l-32,-1L31,63.928z">
+-        <aapt:attr name="android:fillColor">
+-            <gradient
+-                android:endX="85.84757"
+-                android:endY="92.4963"
+-                android:startX="42.9492"
+-                android:startY="49.59793"
+-                android:type="linear">
+-                <item
+-                    android:color="#44000000"
+-                    android:offset="0.0" />
+-                <item
+-                    android:color="#00000000"
+-                    android:offset="1.0" />
+-            </gradient>
+-        </aapt:attr>
+-    </path>
+-    <path
+-        android:fillColor="#FFFFFF"
+-        android:fillType="nonZero"
+-        android:pathData="M65.3,45.828l3.8,-6.6c0.2,-0.4 0.1,-0.9 -0.3,-1.1c-0.4,-0.2 -0.9,-0.1 -1.1,0.3l-3.9,6.7c-6.3,-2.8 -13.4,-2.8 -19.7,0l-3.9,-6.7c-0.2,-0.4 -0.7,-0.5 -1.1,-0.3C38.8,38.328 38.7,38.828 38.9,39.228l3.8,6.6C36.2,49.428 31.7,56.028 31,63.928h46C76.3,56.028 71.8,49.428 65.3,45.828zM43.4,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2c-0.3,-0.7 -0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C45.3,56.528 44.5,57.328 43.4,57.328L43.4,57.328zM64.6,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2s-0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C66.5,56.528 65.6,57.328 64.6,57.328L64.6,57.328z"
+-        android:strokeWidth="1"
+-        android:strokeColor="#00000000" />
+-</vector>
+\ No newline at end of file
+Index: app/src/main/java/com/example/campoapp/ui/gallery/GalleryViewModel.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/ui/gallery/GalleryViewModel.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/java/com/example/campoapp/ui/gallery/GalleryViewModel.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,19 +0,0 @@
+-package com.example.campoapp.ui.gallery;
+-
+-import androidx.lifecycle.LiveData;
+-import androidx.lifecycle.MutableLiveData;
+-import androidx.lifecycle.ViewModel;
+-
+-public class GalleryViewModel extends ViewModel {
+-
+-    private MutableLiveData<String> mText;
+-
+-    public GalleryViewModel() {
+-        mText = new MutableLiveData<>();
+-        mText.setValue("This is gallery fragment");
+-    }
+-
+-    public LiveData<String> getText() {
+-        return mText;
+-    }
+-}
+\ No newline at end of file
+Index: .idea/codeStyles/Project.xml
+===================================================================
+--- .idea/codeStyles/Project.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ .idea/codeStyles/Project.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,116 +0,0 @@
+-<component name="ProjectCodeStyleConfiguration">
+-  <code_scheme name="Project" version="173">
+-    <codeStyleSettings language="XML">
+-      <indentOptions>
+-        <option name="CONTINUATION_INDENT_SIZE" value="4" />
+-      </indentOptions>
+-      <arrangement>
+-        <rules>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>xmlns:android</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>xmlns:.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*:id</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*:name</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>name</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>style</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>ANDROID_ATTRIBUTE_ORDER</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>.*</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-        </rules>
+-      </arrangement>
+-    </codeStyleSettings>
+-  </code_scheme>
+-</component>
+\ No newline at end of file
+Index: app/src/main/java/com/example/campoapp/AdministradorSQLite.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/AdministradorSQLite.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/java/com/example/campoapp/AdministradorSQLite.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,25 +0,0 @@
+-package com.example.campoapp;
+-
+-import android.content.Context;
+-import android.database.sqlite.SQLiteDatabase;
+-import android.database.sqlite.SQLiteOpenHelper;
+-
+-import androidx.annotation.Nullable;
+-
+-public class AdministradorSQLite extends SQLiteOpenHelper {
+-
+-
+-    public AdministradorSQLite(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+-        super(context, name, factory, version);
+-    }
+-
+-    @Override
+-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+-        sqLiteDatabase.execSQL("create table articulos(codigo int primary key, nombre text, precio real )");
+-
+-    }
+-
+-    @Override
+-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+-    }
+-}
+Index: app/src/main/java/com/example/campoapp/ui/slideshow/SlideshowViewModel.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/ui/slideshow/SlideshowViewModel.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/java/com/example/campoapp/ui/slideshow/SlideshowViewModel.java	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
+@@ -1,19 +0,0 @@
+-package com.example.campoapp.ui.slideshow;
+-
+-import androidx.lifecycle.LiveData;
+-import androidx.lifecycle.MutableLiveData;
+-import androidx.lifecycle.ViewModel;
+-
+-public class SlideshowViewModel extends ViewModel {
+-
+-    private MutableLiveData<String> mText;
+-
+-    public SlideshowViewModel() {
+-        mText = new MutableLiveData<>();
+-        mText.setValue("This is slideshow fragment");
+-    }
+-
+-    public LiveData<String> getText() {
+-        return mText;
+-    }
+-}
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_3_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_3_0_aar.xml	(date 1602787853614)
++++ .idea/libraries/Gradle__androidx_test_espresso_espresso_idling_resource_3_3_0_aar.xml	(date 1602787853614)
+@@ -0,0 +1,17 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.test.espresso:espresso-idling-resource:3.3.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/765dc2473d36f102037521245e303953/espresso-idling-resource-3.3.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8d51b6d58b724de47e7024302c5cbb43/espresso-idling-resource-3.3.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/475fbe5f12550f4b6bfbece2819e3d74/espresso-idling-resource-3.3.0/res" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/475fbe5f12550f4b6bfbece2819e3d74/espresso-idling-resource-3.3.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/475fbe5f12550f4b6bfbece2819e3d74/espresso-idling-resource-3.3.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.test.espresso/espresso-idling-resource/3.3.0/ac774bb29e6171578dc7508bf390a4a3ccbedfea/espresso-idling-resource-3.3.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.test.espresso/espresso-idling-resource/3.3.0/ee0f3ffdd7782d68dbe1eafa9337872817cb299e/espresso-idling-resource-3.3.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_2_0_2_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_2_0_2_aar.xml	(date 1602787853455)
++++ .idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_2_0_2_aar.xml	(date 1602787853455)
+@@ -0,0 +1,11 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.constraintlayout:constraintlayout:2.0.2@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2c9b9e1cae1a546662bad51769089f10/constraintlayout-2.0.2/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2c9b9e1cae1a546662bad51769089f10/constraintlayout-2.0.2/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2c9b9e1cae1a546662bad51769089f10/constraintlayout-2.0.2/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: gradlew.bat
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@if \"%DEBUG%\" == \"\" @echo off\r\n@rem ##########################################################################\r\n@rem\r\n@rem  Gradle startup script for Windows\r\n@rem\r\n@rem ##########################################################################\r\n\r\n@rem Set local scope for the variables with windows NT shell\r\nif \"%OS%\"==\"Windows_NT\" setlocal\r\n\r\nset DIRNAME=%~dp0\r\nif \"%DIRNAME%\" == \"\" set DIRNAME=.\r\nset APP_BASE_NAME=%~n0\r\nset APP_HOME=%DIRNAME%\r\n\r\n@rem Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.\r\nset DEFAULT_JVM_OPTS=\r\n\r\n@rem Find java.exe\r\nif defined JAVA_HOME goto findJavaFromJavaHome\r\n\r\nset JAVA_EXE=java.exe\r\n%JAVA_EXE% -version >NUL 2>&1\r\nif \"%ERRORLEVEL%\" == \"0\" goto init\r\n\r\necho.\r\necho ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.\r\necho.\r\necho Please set the JAVA_HOME variable in your environment to match the\r\necho location of your Java installation.\r\n\r\ngoto fail\r\n\r\n:findJavaFromJavaHome\r\nset JAVA_HOME=%JAVA_HOME:\"=%\r\nset JAVA_EXE=%JAVA_HOME%/bin/java.exe\r\n\r\nif exist \"%JAVA_EXE%\" goto init\r\n\r\necho.\r\necho ERROR: JAVA_HOME is set to an invalid directory: %JAVA_HOME%\r\necho.\r\necho Please set the JAVA_HOME variable in your environment to match the\r\necho location of your Java installation.\r\n\r\ngoto fail\r\n\r\n:init\r\n@rem Get command-line arguments, handling Windows variants\r\n\r\nif not \"%OS%\" == \"Windows_NT\" goto win9xME_args\r\n\r\n:win9xME_args\r\n@rem Slurp the command line arguments.\r\nset CMD_LINE_ARGS=\r\nset _SKIP=2\r\n\r\n:win9xME_args_slurp\r\nif \"x%~1\" == \"x\" goto execute\r\n\r\nset CMD_LINE_ARGS=%*\r\n\r\n:execute\r\n@rem Setup the command line\r\n\r\nset CLASSPATH=%APP_HOME%\\gradle\\wrapper\\gradle-wrapper.jar\r\n\r\n@rem Execute Gradle\r\n\"%JAVA_EXE%\" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% \"-Dorg.gradle.appname=%APP_BASE_NAME%\" -classpath \"%CLASSPATH%\" org.gradle.wrapper.GradleWrapperMain %CMD_LINE_ARGS%\r\n\r\n:end\r\n@rem End local scope for the variables with windows NT shell\r\nif \"%ERRORLEVEL%\"==\"0\" goto mainEnd\r\n\r\n:fail\r\nrem Set variable GRADLE_EXIT_CONSOLE if you need the _script_ return code instead of\r\nrem the _cmd.exe /c_ return code!\r\nif  not \"\" == \"%GRADLE_EXIT_CONSOLE%\" exit 1\r\nexit /b 1\r\n\r\n:mainEnd\r\nif \"%OS%\"==\"Windows_NT\" endlocal\r\n\r\n:omega\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- gradlew.bat	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ gradlew.bat	(date 1602790436038)
+@@ -1,84 +1,0 @@
+-@if "%DEBUG%" == "" @echo off
+-@rem ##########################################################################
+-@rem
+-@rem  Gradle startup script for Windows
+-@rem
+-@rem ##########################################################################
+-
+-@rem Set local scope for the variables with windows NT shell
+-if "%OS%"=="Windows_NT" setlocal
+-
+-set DIRNAME=%~dp0
+-if "%DIRNAME%" == "" set DIRNAME=.
+-set APP_BASE_NAME=%~n0
+-set APP_HOME=%DIRNAME%
+-
+-@rem Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
+-set DEFAULT_JVM_OPTS=
+-
+-@rem Find java.exe
+-if defined JAVA_HOME goto findJavaFromJavaHome
+-
+-set JAVA_EXE=java.exe
+-%JAVA_EXE% -version >NUL 2>&1
+-if "%ERRORLEVEL%" == "0" goto init
+-
+-echo.
+-echo ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
+-echo.
+-echo Please set the JAVA_HOME variable in your environment to match the
+-echo location of your Java installation.
+-
+-goto fail
+-
+-:findJavaFromJavaHome
+-set JAVA_HOME=%JAVA_HOME:"=%
+-set JAVA_EXE=%JAVA_HOME%/bin/java.exe
+-
+-if exist "%JAVA_EXE%" goto init
+-
+-echo.
+-echo ERROR: JAVA_HOME is set to an invalid directory: %JAVA_HOME%
+-echo.
+-echo Please set the JAVA_HOME variable in your environment to match the
+-echo location of your Java installation.
+-
+-goto fail
+-
+-:init
+-@rem Get command-line arguments, handling Windows variants
+-
+-if not "%OS%" == "Windows_NT" goto win9xME_args
+-
+-:win9xME_args
+-@rem Slurp the command line arguments.
+-set CMD_LINE_ARGS=
+-set _SKIP=2
+-
+-:win9xME_args_slurp
+-if "x%~1" == "x" goto execute
+-
+-set CMD_LINE_ARGS=%*
+-
+-:execute
+-@rem Setup the command line
+-
+-set CLASSPATH=%APP_HOME%\gradle\wrapper\gradle-wrapper.jar
+-
+-@rem Execute Gradle
+-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% "-Dorg.gradle.appname=%APP_BASE_NAME%" -classpath "%CLASSPATH%" org.gradle.wrapper.GradleWrapperMain %CMD_LINE_ARGS%
+-
+-:end
+-@rem End local scope for the variables with windows NT shell
+-if "%ERRORLEVEL%"=="0" goto mainEnd
+-
+-:fail
+-rem Set variable GRADLE_EXIT_CONSOLE if you need the _script_ return code instead of
+-rem the _cmd.exe /c_ return code!
+-if  not "" == "%GRADLE_EXIT_CONSOLE%" exit 1
+-exit /b 1
+-
+-:mainEnd
+-if "%OS%"=="Windows_NT" endlocal
+-
+-:omega
+Index: .idea/libraries/Gradle__androidx_lifecycle_lifecycle_process_2_1_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_lifecycle_lifecycle_process_2_1_0_aar.xml	(date 1602787853527)
++++ .idea/libraries/Gradle__androidx_lifecycle_lifecycle_process_2_1_0_aar.xml	(date 1602787853527)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.lifecycle:lifecycle-process:2.1.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/894873d045a0a220e7c24d43283db9eb/jetified-lifecycle-process-2.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/67f50bf9e8ec0e817db6486d97ff49c5/jetified-lifecycle-process-2.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ab7852cdde18efbfb5cd764a30ca8452/jetified-lifecycle-process-2.1.0/res" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ab7852cdde18efbfb5cd764a30ca8452/jetified-lifecycle-process-2.1.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ab7852cdde18efbfb5cd764a30ca8452/jetified-lifecycle-process-2.1.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-process/2.1.0/a3ddd1911f2911de0d6d090f83e0f3441d398f6e/lifecycle-process-2.1.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_solver_2_0_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_solver_2_0_2.xml	(date 1602721290339)
++++ .idea/libraries/Gradle__androidx_constraintlayout_constraintlayout_solver_2_0_2.xml	(date 1602721290339)
+@@ -0,0 +1,9 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.constraintlayout:constraintlayout-solver:2.0.2">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.constraintlayout/constraintlayout-solver/2.0.2/18fb204d40a3bb60d9e797f25912adad32b5e2ad/constraintlayout-solver-2.0.2.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>*.iml\r\n.gradle\r\n/local.properties\r\n/.idea/caches\r\n/.idea/libraries\r\n/.idea/modules.xml\r\n/.idea/workspace.xml\r\n/.idea/navEditor.xml\r\n/.idea/assetWizardSettings.xml\r\n.DS_Store\r\n/build\r\n/captures\r\n.externalNativeBuild\r\n.cxx\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .gitignore	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ .gitignore	(date 1602790436036)
+@@ -1,14 +1,0 @@
+-*.iml
+-.gradle
+-/local.properties
+-/.idea/caches
+-/.idea/libraries
+-/.idea/modules.xml
+-/.idea/workspace.xml
+-/.idea/navEditor.xml
+-/.idea/assetWizardSettings.xml
+-.DS_Store
+-/build
+-/captures
+-.externalNativeBuild
+-.cxx
+Index: .idea/libraries/Gradle__androidx_navigation_navigation_fragment_2_1_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_navigation_navigation_fragment_2_1_0_aar.xml	(date 1602787853562)
++++ .idea/libraries/Gradle__androidx_navigation_navigation_fragment_2_1_0_aar.xml	(date 1602787853562)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.navigation:navigation-fragment:2.1.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8302272b67c30f5b736a651ac0282ea3/navigation-fragment-2.1.0/res" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8302272b67c30f5b736a651ac0282ea3/navigation-fragment-2.1.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8302272b67c30f5b736a651ac0282ea3/navigation-fragment-2.1.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.navigation/navigation-fragment/2.1.0/295bf8aefd69194e1187f49b70b89741470faf72/navigation-fragment-2.1.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml	(date 1602787853475)
++++ .idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml	(date 1602787853475)
+@@ -0,0 +1,18 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.drawerlayout:drawerlayout:1.0.0@aar">
++    <ANNOTATIONS>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5e8e7124cf76b3afb7d5688dae9741a5/drawerlayout-1.0.0/annotations.zip!/" />
++    </ANNOTATIONS>
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4c1ade53cc4b20d7bc631ac17d3bfca4/drawerlayout-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/142e93d95da0344235eb82ee7f05a108/drawerlayout-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5e8e7124cf76b3afb7d5688dae9741a5/drawerlayout-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5e8e7124cf76b3afb7d5688dae9741a5/drawerlayout-1.0.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5e8e7124cf76b3afb7d5688dae9741a5/drawerlayout-1.0.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.drawerlayout/drawerlayout/1.0.0/9ecd4ecb7da215ba4c5c3e00bf8d290dad6f2bc5/drawerlayout-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml	(date 1602787853478)
++++ .idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml	(date 1602787853478)
+@@ -0,0 +1,18 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.fragment:fragment:1.1.0@aar">
++    <ANNOTATIONS>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f94e053a1013f3d2f3399965779fd12f/fragment-1.1.0/annotations.zip!/" />
++    </ANNOTATIONS>
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/12c076570219bdc2a11e9d0df335391a/fragment-1.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/935c1eb103e362446c63f75dbc889f07/fragment-1.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f94e053a1013f3d2f3399965779fd12f/fragment-1.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f94e053a1013f3d2f3399965779fd12f/fragment-1.1.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f94e053a1013f3d2f3399965779fd12f/fragment-1.1.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.fragment/fragment/1.1.0/b9ebb04df2cb0cad4419af3c658690bc82aa5706/fragment-1.1.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml	(date 1602721290635)
++++ .idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml	(date 1602721290635)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: org.hamcrest:hamcrest-core:1.3">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/ad09811315f1d4f5756986575b0ea16b99cd686f/hamcrest-core-1.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/jarRepositories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"RemoteRepositoriesConfiguration\">\r\n    <remote-repository>\r\n      <option name=\"id\" value=\"central\" />\r\n      <option name=\"name\" value=\"Maven Central repository\" />\r\n      <option name=\"url\" value=\"https://repo1.maven.org/maven2\" />\r\n    </remote-repository>\r\n    <remote-repository>\r\n      <option name=\"id\" value=\"jboss.community\" />\r\n      <option name=\"name\" value=\"JBoss Community repository\" />\r\n      <option name=\"url\" value=\"https://repository.jboss.org/nexus/content/repositories/public/\" />\r\n    </remote-repository>\r\n    <remote-repository>\r\n      <option name=\"id\" value=\"BintrayJCenter\" />\r\n      <option name=\"name\" value=\"BintrayJCenter\" />\r\n      <option name=\"url\" value=\"https://jcenter.bintray.com/\" />\r\n    </remote-repository>\r\n    <remote-repository>\r\n      <option name=\"id\" value=\"Google\" />\r\n      <option name=\"name\" value=\"Google\" />\r\n      <option name=\"url\" value=\"https://dl.google.com/dl/android/maven2/\" />\r\n    </remote-repository>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/jarRepositories.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ .idea/jarRepositories.xml	(date 1602790436052)
+@@ -1,25 +1,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="RemoteRepositoriesConfiguration">
+-    <remote-repository>
+-      <option name="id" value="central" />
+-      <option name="name" value="Maven Central repository" />
+-      <option name="url" value="https://repo1.maven.org/maven2" />
+-    </remote-repository>
+-    <remote-repository>
+-      <option name="id" value="jboss.community" />
+-      <option name="name" value="JBoss Community repository" />
+-      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+-    </remote-repository>
+-    <remote-repository>
+-      <option name="id" value="BintrayJCenter" />
+-      <option name="name" value="BintrayJCenter" />
+-      <option name="url" value="https://jcenter.bintray.com/" />
+-    </remote-repository>
+-    <remote-repository>
+-      <option name="id" value="Google" />
+-      <option name="name" value="Google" />
+-      <option name="url" value="https://dl.google.com/dl/android/maven2/" />
+-    </remote-repository>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_test_core_1_3_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_test_core_1_3_0_aar.xml	(date 1602787853590)
++++ .idea/libraries/Gradle__androidx_test_core_1_3_0_aar.xml	(date 1602787853590)
+@@ -0,0 +1,17 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.test:core:1.3.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e1fa67c237e32b687099a9f7817fbf43/jetified-core-1.3.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a8663a8cd2e134851740fda69f0f0bde/jetified-core-1.3.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2155bcb3c222812ce4bd5cb8ba743d8e/jetified-core-1.3.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2155bcb3c222812ce4bd5cb8ba743d8e/jetified-core-1.3.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2155bcb3c222812ce4bd5cb8ba743d8e/jetified-core-1.3.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.test/core/1.3.0/3d046283a0729cb2d5dacdd9b3f8b62203052da5/core-1.3.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.test/core/1.3.0/cab982e254e02674aa7a46e3086986cddd50ca06/core-1.3.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_0_0_aar.xml	(date 1602787853576)
++++ .idea/libraries/Gradle__androidx_recyclerview_recyclerview_1_0_0_aar.xml	(date 1602787853576)
+@@ -0,0 +1,16 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.recyclerview:recyclerview:1.0.0@aar">
++    <ANNOTATIONS>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f0c7414811ad2c27e6598b6247e386b6/recyclerview-1.0.0/annotations.zip!/" />
++    </ANNOTATIONS>
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f0c7414811ad2c27e6598b6247e386b6/recyclerview-1.0.0/res" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f0c7414811ad2c27e6598b6247e386b6/recyclerview-1.0.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f0c7414811ad2c27e6598b6247e386b6/recyclerview-1.0.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.0.0/2151d26c3b241f0a887f2dadb9ab091649fcf020/recyclerview-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__javax_inject_javax_inject_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__javax_inject_javax_inject_1.xml	(date 1602721290622)
++++ .idea/libraries/Gradle__javax_inject_javax_inject_1.xml	(date 1602721290622)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: javax.inject:javax.inject:1">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/70ec961c25111ed9015d1af77772d96383c2d238/javax.inject-1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/a00123f261762a7c5e0ec916a2c7c8298d29c400/javax.inject-1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_arch_core_core_common_2_1_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_arch_core_core_common_2_1_0.xml	(date 1602721290296)
++++ .idea/libraries/Gradle__androidx_arch_core_core_common_2_1_0.xml	(date 1602721290296)
+@@ -0,0 +1,11 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.arch.core:core-common:2.1.0">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.1.0/b3152fc64428c9354344bd89848ecddc09b6f07e/core-common-2.1.0.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.1.0/80ac2d7c8e6400ce2fbc663cd1a7e1cbef38c4b8/core-common-2.1.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml	(date 1602787853580)
++++ .idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml	(date 1602787853580)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.savedstate:savedstate:1.0.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/86f8c8e32c7613bbe5e86eb4377e9413/jetified-savedstate-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/335a1a6eb49eac2eab041286c81584a5/jetified-savedstate-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/52410fe1003ad3431e8f92a089d01497/jetified-savedstate-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/52410fe1003ad3431e8f92a089d01497/jetified-savedstate-1.0.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/52410fe1003ad3431e8f92a089d01497/jetified-savedstate-1.0.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.savedstate/savedstate/1.0.0/e6daf87ed227a6f80bb8accb466755a5ee01a652/savedstate-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml	(date 1602787853445)
++++ .idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml	(date 1602787853445)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.arch.core:core-runtime:2.1.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e737982ea91fdf7ea321d344c75db0be/core-runtime-2.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5344f376b9f142648746b3ae893fe6dc/core-runtime-2.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b2230819b37d35371c74544696c2f190/core-runtime-2.1.0/res" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b2230819b37d35371c74544696c2f190/core-runtime-2.1.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b2230819b37d35371c74544696c2f190/core-runtime-2.1.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-runtime/2.1.0/f19886651c9946b39f83d8c184fd0e2ce9f43c16/core-runtime-2.1.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_test_runner_1_3_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_test_runner_1_3_0_aar.xml	(date 1602787853625)
++++ .idea/libraries/Gradle__androidx_test_runner_1_3_0_aar.xml	(date 1602787853625)
+@@ -0,0 +1,17 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.test:runner:1.3.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/67199b30d2680334ca86c9bb23e7a1b4/runner-1.3.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f58d4fba7afde67aecf7997a0ea1d8dc/runner-1.3.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8012717721363c9bbf13e969fe960238/runner-1.3.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8012717721363c9bbf13e969fe960238/runner-1.3.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8012717721363c9bbf13e969fe960238/runner-1.3.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.test/runner/1.3.0/c0fd1f1e715bfa4777ae6a679444f7471205ee7c/runner-1.3.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.test/runner/1.3.0/506c97f735db13fda1943c4eb95f2ccfc7b457e0/runner-1.3.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/gradle.xml~parent of 6803b1c... Inicio Rama de Desarrollador
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/gradle.xml~parent of 6803b1c... Inicio Rama de Desarrollador	(date 1602790251258)
++++ .idea/gradle.xml~parent of 6803b1c... Inicio Rama de Desarrollador	(date 1602790251258)
+@@ -0,0 +1,21 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="GradleMigrationSettings" migrationVersion="1" />
++  <component name="GradleSettings">
++    <option name="linkedExternalProjectsSettings">
++      <GradleProjectSettings>
++        <option name="testRunner" value="PLATFORM" />
++        <option name="distributionType" value="DEFAULT_WRAPPED" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="gradleJvm" value="1.8" />
++        <option name="modules">
++          <set>
++            <option value="$PROJECT_DIR$" />
++            <option value="$PROJECT_DIR$/app" />
++          </set>
++        </option>
++        <option name="resolveModulePerSourceSet" value="false" />
++      </GradleProjectSettings>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml	(date 1602787853487)
++++ .idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml	(date 1602787853487)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.legacy:legacy-support-core-utils:1.0.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/18f5c1f0dcc08504bb6a1709d838cf6b/legacy-support-core-utils-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bdfbb38555a741f74d62c90cf85e0b35/legacy-support-core-utils-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0ee1000b6cc9e588b3f4502935c5b26f/legacy-support-core-utils-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0ee1000b6cc9e588b3f4502935c5b26f/legacy-support-core-utils-1.0.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0ee1000b6cc9e588b3f4502935c5b26f/legacy-support-core-utils-1.0.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.legacy/legacy-support-core-utils/1.0.0/46c37f178088153618cfb0afef08ec96c48f93cb/legacy-support-core-utils-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_core_core_1_3_1_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_core_core_1_3_1_aar.xml	(date 1602787853461)
++++ .idea/libraries/Gradle__androidx_core_core_1_3_1_aar.xml	(date 1602787853461)
+@@ -0,0 +1,16 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.core:core:1.3.1@aar">
++    <ANNOTATIONS>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3eb28494a4e0c8b185afed99bdff9bd6/core-1.3.1/annotations.zip!/" />
++    </ANNOTATIONS>
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3eb28494a4e0c8b185afed99bdff9bd6/core-1.3.1/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3eb28494a4e0c8b185afed99bdff9bd6/core-1.3.1/AndroidManifest.xml" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3eb28494a4e0c8b185afed99bdff9bd6/core-1.3.1/res" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.core/core/1.3.1/d70edd6d800903a31efea1a28ae531bd91e1a926/core-1.3.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/misc.xml~parent of 6803b1c... Inicio Rama de Desarrollador
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml~parent of 6803b1c... Inicio Rama de Desarrollador	(date 1602790251257)
++++ .idea/misc.xml~parent of 6803b1c... Inicio Rama de Desarrollador	(date 1602790251257)
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CMakeSettings">
++    <configurations>
++      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
++    </configurations>
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/build/classes" />
++  </component>
++  <component name="ProjectType">
++    <option name="id" value="Android" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml	(date 1602787853586)
++++ .idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml	(date 1602787853586)
+@@ -0,0 +1,18 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.swiperefreshlayout:swiperefreshlayout:1.0.0@aar">
++    <ANNOTATIONS>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5e7a4341eea8115c1376c5f011faa959/swiperefreshlayout-1.0.0/annotations.zip!/" />
++    </ANNOTATIONS>
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a083b9190df6cd0b2eed1b8d83acb3d5/swiperefreshlayout-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d38c28a7a4bd66deb92fbaacca82413e/swiperefreshlayout-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5e7a4341eea8115c1376c5f011faa959/swiperefreshlayout-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5e7a4341eea8115c1376c5f011faa959/swiperefreshlayout-1.0.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5e7a4341eea8115c1376c5f011faa959/swiperefreshlayout-1.0.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.swiperefreshlayout/swiperefreshlayout/1.0.0/ab92d86c004eb1d48e45f311b02ca53d6c86b607/swiperefreshlayout-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_2_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_2_0.xml	(date 1602787853498)
++++ .idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_2_0.xml	(date 1602787853498)
+@@ -0,0 +1,11 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.lifecycle:lifecycle-common:2.2.0">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.2.0/4ef09a745007778eef83b92f8f23987a8ea59496/lifecycle-common-2.2.0.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.2.0/d38861c5e1656c5eb1890b1fa149510f38aa5d42/lifecycle-common-2.2.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml	(date 1602787853492)
++++ .idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml	(date 1602787853492)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.legacy:legacy-support-v4:1.0.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/be0f08ddbc7b2ceb9beb29e6b731c207/legacy-support-v4-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0ccf7d1f41f08a9fbac49eb844da8039/legacy-support-v4-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8b1498eacf432d44a3b8c1219c7c72ce/legacy-support-v4-1.0.0/res" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8b1498eacf432d44a3b8c1219c7c72ce/legacy-support-v4-1.0.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8b1498eacf432d44a3b8c1219c7c72ce/legacy-support-v4-1.0.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.legacy/legacy-support-v4/1.0.0/5b8f86fea035328fc9e8c660773037a3401ce25f/legacy-support-v4-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_2_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_2_0_aar.xml	(date 1602787853513)
++++ .idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_2_0_aar.xml	(date 1602787853513)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.lifecycle:lifecycle-livedata-core:2.2.0@aar">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b9882a7c80694da583785012644f4275/lifecycle-livedata-core-2.2.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b9882a7c80694da583785012644f4275/lifecycle-livedata-core-2.2.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b9882a7c80694da583785012644f4275/lifecycle-livedata-core-2.2.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-core/2.2.0/6dcd7f31093b360c4a8bced748159e6fd237ba52/lifecycle-livedata-core-2.2.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_0_aar.xml	(date 1602787853640)
++++ .idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_1_0_aar.xml	(date 1602787853640)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.versionedparcelable:versionedparcelable:1.1.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/67aa86ef8808cac41aa5afe6d271f3ea/versionedparcelable-1.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/94115104efb23786ea53cd1a51dde3af/versionedparcelable-1.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/286143be83c357588807171922603da5/versionedparcelable-1.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/286143be83c357588807171922603da5/versionedparcelable-1.1.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/286143be83c357588807171922603da5/versionedparcelable-1.1.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.versionedparcelable/versionedparcelable/1.1.0/d9085927216387af679d18b6f472bc0fc5c7cc81/versionedparcelable-1.1.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <string name=\"app_name\">CampoApp</string>\r\n    <string name=\"Blogin\">Login</string>\r\n    <string name=\"Bregistro\">Registrate</string>\r\n    <string name=\"Email\">Digite Email</string>\r\n    <string name=\"Contra\">Digite Contraseña</string>\r\n    <string name=\"EmailR\">Digite Email</string>\r\n    <string name=\"ContraR\">Digite Contraseña</string>\r\n    <string name=\"cc\">Digite Cédula</string>\r\n    <string name=\"Nombre\">Digite Nombre</string>\r\n    <string name=\"Profesion\">Digite Profesión</string>\r\n    <string name=\"Celular\">Digite Celular</string>\r\n    <string name=\"Registar\">Registrar</string>\r\n    <string name=\"Escuchar\">Escuchando Pregunta</string>\r\n    <string name=\"Responder\">Preparando Respuesta</string>\r\n\r\n\r\n    <string name=\"title_activity_menu_slide\">MenuSlideActivity</string>\r\n    <string name=\"navigation_drawer_open\">Open navigation drawer</string>\r\n    <string name=\"navigation_drawer_close\">Close navigation drawer</string>\r\n    <string name=\"nav_header_title\">Android Studio</string>\r\n    <string name=\"nav_header_subtitle\">android.studio@android.com</string>\r\n    <string name=\"nav_header_desc\">Navigation header</string>\r\n    <string name=\"action_settings\">Settings</string>\r\n\r\n    <string name=\"menu_home\">Home</string>\r\n    <string name=\"menu_gallery\">Gallery</string>\r\n    <string name=\"menu_slideshow\">Slideshow</string>\r\n\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/strings.xml	(revision 0f3d4cd439d0f0e8f0cce2d5954e5cc7a6068e6c)
++++ app/src/main/res/values/strings.xml	(date 1602790433620)
+@@ -9,7 +9,7 @@
+     <string name="cc">Digite Cédula</string>
+     <string name="Nombre">Digite Nombre</string>
+     <string name="Profesion">Digite Profesión</string>
+-    <string name="Celular">Digite Celular</string>
++    <string name="Direccion">Digite Dirección</string>
+     <string name="Registar">Registrar</string>
+     <string name="Escuchar">Escuchando Pregunta</string>
+     <string name="Responder">Preparando Respuesta</string>
+Index: .idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_2_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_2_0_aar.xml	(date 1602787853508)
++++ .idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_2_0_aar.xml	(date 1602787853508)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.lifecycle:lifecycle-livedata:2.2.0@aar">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/77ec89c265d79d2e20231f2b7f2a1fb7/lifecycle-livedata-2.2.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/77ec89c265d79d2e20231f2b7f2a1fb7/lifecycle-livedata-2.2.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/77ec89c265d79d2e20231f2b7f2a1fb7/lifecycle-livedata-2.2.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata/2.2.0/9849dd6833f7e999169e4f9d48949cc92bf58b50/lifecycle-livedata-2.2.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_ktx_2_2_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_ktx_2_2_0_aar.xml	(date 1602787853523)
++++ .idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_ktx_2_2_0_aar.xml	(date 1602787853523)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.lifecycle:lifecycle-livedata-ktx:2.2.0@aar">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c2dc7fd9026fb49da9cb6f4b2c36c2b1/jetified-lifecycle-livedata-ktx-2.2.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c2dc7fd9026fb49da9cb6f4b2c36c2b1/jetified-lifecycle-livedata-ktx-2.2.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c2dc7fd9026fb49da9cb6f4b2c36c2b1/jetified-lifecycle-livedata-ktx-2.2.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-ktx/2.2.0/cf14c53d6d424fadcf5334860b11d1733ae8a422/lifecycle-livedata-ktx-2.2.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_test_ext_junit_1_1_2_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_test_ext_junit_1_1_2_aar.xml	(date 1602787853618)
++++ .idea/libraries/Gradle__androidx_test_ext_junit_1_1_2_aar.xml	(date 1602787853618)
+@@ -0,0 +1,17 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.test.ext:junit:1.1.2@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f562a24cc97f2b7743c5b299329a0076/jetified-junit-1.1.2/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c293fc76dd2c99b56ffe4138dedeefff/jetified-junit-1.1.2/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1f06f384ff90035caec4a7a0fecc1110/jetified-junit-1.1.2/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1f06f384ff90035caec4a7a0fecc1110/jetified-junit-1.1.2/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1f06f384ff90035caec4a7a0fecc1110/jetified-junit-1.1.2/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.test.ext/junit/1.1.2/c69cad63303f01767122a49e379c6121d6721a0b/junit-1.1.2-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.test.ext/junit/1.1.2/d8ceef67c64321bbf484dc5997a1d2efa319bed7/junit-1.1.2-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_navigation_navigation_runtime_2_1_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_navigation_navigation_runtime_2_1_0_aar.xml	(date 1602787853566)
++++ .idea/libraries/Gradle__androidx_navigation_navigation_runtime_2_1_0_aar.xml	(date 1602787853566)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.navigation:navigation-runtime:2.1.0@aar">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/37c37704f09f89e12fbd14966c194832/navigation-runtime-2.1.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/37c37704f09f89e12fbd14966c194832/navigation-runtime-2.1.0/AndroidManifest.xml" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/37c37704f09f89e12fbd14966c194832/navigation-runtime-2.1.0/res" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.navigation/navigation-runtime/2.1.0/70f29099a9d448c5628873c0314d133e9de7fdf3/navigation-runtime-2.1.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_ktx_2_2_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_ktx_2_2_0_aar.xml	(date 1602787853517)
++++ .idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_ktx_2_2_0_aar.xml	(date 1602787853517)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0@aar">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fda104ff42c1520e0ba578e8d3309371/jetified-lifecycle-livedata-core-ktx-2.2.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fda104ff42c1520e0ba578e8d3309371/jetified-lifecycle-livedata-core-ktx-2.2.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fda104ff42c1520e0ba578e8d3309371/jetified-lifecycle-livedata-core-ktx-2.2.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-livedata-core-ktx/2.2.0/7aa8d50b21a293f7a525ec84869c421a963b0188/lifecycle-livedata-core-ktx-2.2.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_test_monitor_1_3_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_test_monitor_1_3_0_aar.xml	(date 1602787853621)
++++ .idea/libraries/Gradle__androidx_test_monitor_1_3_0_aar.xml	(date 1602787853621)
+@@ -0,0 +1,17 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.test:monitor:1.3.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ae7c909fc6975af856e44042f4b2c406/monitor-1.3.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5b8d9caeef3b3b14e4d5edf4ccebad1f/monitor-1.3.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/067875b01c5d523ce00a77777271e820/monitor-1.3.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/067875b01c5d523ce00a77777271e820/monitor-1.3.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/067875b01c5d523ce00a77777271e820/monitor-1.3.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.test/monitor/1.3.0/3a80466a460e22ec785a9c0ad1a1cbaf6a08c0ee/monitor-1.3.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.test/monitor/1.3.0/42fd8fe34ba94b2e75f5df0b3184887af6f98670/monitor-1.3.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_ktx_2_2_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_ktx_2_2_0_aar.xml	(date 1602787853544)
++++ .idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_ktx_2_2_0_aar.xml	(date 1602787853544)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0@aar">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/08a85aa7fea7d36e30f34550c635a849/jetified-lifecycle-viewmodel-ktx-2.2.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/08a85aa7fea7d36e30f34550c635a849/jetified-lifecycle-viewmodel-ktx-2.2.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/08a85aa7fea7d36e30f34550c635a849/jetified-lifecycle-viewmodel-ktx-2.2.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel-ktx/2.2.0/3bc5992b0bb49e2d7ce92d34c45e54e1795cc03b/lifecycle-viewmodel-ktx-2.2.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1.xml	(date 1602721290611)
++++ .idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1.xml	(date 1602721290611)
+@@ -0,0 +1,9 @@
++<component name="libraryTable">
++  <library name="Gradle: com.google.code.findbugs:jsr305:2.0.1">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/2.0.1/516c03b21d50a644d538de0f0369c620989cd8f0/jsr305-2.0.1.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_2_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_2_0_aar.xml	(date 1602787853539)
++++ .idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_2_0_aar.xml	(date 1602787853539)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.lifecycle:lifecycle-viewmodel:2.2.0@aar">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/710a33f74f40f62aab5ddc7d4a11d866/lifecycle-viewmodel-2.2.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/710a33f74f40f62aab5ddc7d4a11d866/lifecycle-viewmodel-2.2.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/710a33f74f40f62aab5ddc7d4a11d866/lifecycle-viewmodel-2.2.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-viewmodel/2.2.0/4f90404dd52d3162217bf329db5afb32d373ec63/lifecycle-viewmodel-2.2.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml	(date 1602787853464)
++++ .idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml	(date 1602787853464)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.cursoradapter:cursoradapter:1.0.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7c0677be8011741026309ef690a9f4db/cursoradapter-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/85bbcabe709b3efb54d74d18f7977a81/cursoradapter-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0ee86f03afa30fbe93aa2f48d6df112d/cursoradapter-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0ee86f03afa30fbe93aa2f48d6df112d/cursoradapter-1.0.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0ee86f03afa30fbe93aa2f48d6df112d/cursoradapter-1.0.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.cursoradapter/cursoradapter/1.0.0/1e323083b41c31fd4d45510dfce50614963c3c6c/cursoradapter-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_navigation_navigation_common_2_1_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_navigation_navigation_common_2_1_0_aar.xml	(date 1602787853559)
++++ .idea/libraries/Gradle__androidx_navigation_navigation_common_2_1_0_aar.xml	(date 1602787853559)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.navigation:navigation-common:2.1.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f5cb9c76b33d0cfdc4dd017f9f4d764f/navigation-common-2.1.0/AndroidManifest.xml" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f5cb9c76b33d0cfdc4dd017f9f4d764f/navigation-common-2.1.0/res" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f5cb9c76b33d0cfdc4dd017f9f4d764f/navigation-common-2.1.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.navigation/navigation-common/2.1.0/effb6f26806b1ecc6af7cd8ebe6a30c592a0c356/navigation-common-2.1.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__com_firebaseui_firebase_ui_auth_6_1_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__com_firebaseui_firebase_ui_auth_6_1_0_aar.xml	(date 1602787853648)
++++ .idea/libraries/Gradle__com_firebaseui_firebase_ui_auth_6_1_0_aar.xml	(date 1602787853648)
+@@ -0,0 +1,18 @@
++<component name="libraryTable">
++  <library name="Gradle: com.firebaseui:firebase-ui-auth:6.1.0@aar">
++    <ANNOTATIONS>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c1b5ceb32eb867069b3aa3d48f938344/jetified-firebase-ui-auth-6.1.0/annotations.zip!/" />
++    </ANNOTATIONS>
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c1b5ceb32eb867069b3aa3d48f938344/jetified-firebase-ui-auth-6.1.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c1b5ceb32eb867069b3aa3d48f938344/jetified-firebase-ui-auth-6.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c1b5ceb32eb867069b3aa3d48f938344/jetified-firebase-ui-auth-6.1.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.firebaseui/firebase-ui-auth/6.1.0/21a987b39cb2e26fdbdee7801ad818aede665c85/firebase-ui-auth-6.1.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.firebaseui/firebase-ui-auth/6.1.0/3456893b4aa1c9259a23e03d78eca40dd1e6bef3/firebase-ui-auth-6.1.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml	(date 1602787853632)
++++ .idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_1_1_0_aar.xml	(date 1602787853632)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.vectordrawable:vectordrawable:1.1.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0878a65179abd6a1b5016c6981bce614/vectordrawable-1.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/24a7c4b656e8849fce6b1ec879de45c1/vectordrawable-1.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d07c23c57c5bbc57a8a04d62126aeb16/vectordrawable-1.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d07c23c57c5bbc57a8a04d62126aeb16/vectordrawable-1.1.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d07c23c57c5bbc57a8a04d62126aeb16/vectordrawable-1.1.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.vectordrawable/vectordrawable/1.1.0/1e0694477eed874c50c54b547cc3e5a62a57a62b/vectordrawable-1.1.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__com_google_android_gms_play_services_auth_base_17_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__com_google_android_gms_play_services_auth_base_17_0_0_aar.xml	(date 1602787853662)
++++ .idea/libraries/Gradle__com_google_android_gms_play_services_auth_base_17_0_0_aar.xml	(date 1602787853662)
+@@ -0,0 +1,11 @@
++<component name="libraryTable">
++  <library name="Gradle: com.google.android.gms:play-services-auth-base:17.0.0@aar">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f93970fd8cc8892cd01ce309f1479c51/jetified-play-services-auth-base-17.0.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f93970fd8cc8892cd01ce309f1479c51/jetified-play-services-auth-base-17.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f93970fd8cc8892cd01ce309f1479c51/jetified-play-services-auth-base-17.0.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__com_google_android_gms_play_services_auth_api_phone_17_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__com_google_android_gms_play_services_auth_api_phone_17_0_0_aar.xml	(date 1602787853657)
++++ .idea/libraries/Gradle__com_google_android_gms_play_services_auth_api_phone_17_0_0_aar.xml	(date 1602787853657)
+@@ -0,0 +1,11 @@
++<component name="libraryTable">
++  <library name="Gradle: com.google.android.gms:play-services-auth-api-phone:17.0.0@aar">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d6d7d1cee41b1c5ed4124e78a5d55bc5/jetified-play-services-auth-api-phone-17.0.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d6d7d1cee41b1c5ed4124e78a5d55bc5/jetified-play-services-auth-api-phone-17.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d6d7d1cee41b1c5ed4124e78a5d55bc5/jetified-play-services-auth-api-phone-17.0.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_2_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_2_0_aar.xml	(date 1602787853442)
++++ .idea/libraries/Gradle__androidx_appcompat_appcompat_resources_1_2_0_aar.xml	(date 1602787853442)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.appcompat:appcompat-resources:1.2.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa2b4aba44b872d1bc0afd63c910392/jetified-appcompat-resources-1.2.0/AndroidManifest.xml" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa2b4aba44b872d1bc0afd63c910392/jetified-appcompat-resources-1.2.0/res" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa2b4aba44b872d1bc0afd63c910392/jetified-appcompat-resources-1.2.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat-resources/1.2.0/9c8b428f65a329eeff4f6abe14a44931b12ef3f2/appcompat-resources-1.2.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__com_google_android_gms_play_services_base_17_1_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__com_google_android_gms_play_services_base_17_1_0_aar.xml	(date 1602787853666)
++++ .idea/libraries/Gradle__com_google_android_gms_play_services_base_17_1_0_aar.xml	(date 1602787853666)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: com.google.android.gms:play-services-base:17.1.0@aar">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b79bdf233aa10f19b46a9a58f12563ae/jetified-play-services-base-17.1.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b79bdf233aa10f19b46a9a58f12563ae/jetified-play-services-base-17.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b79bdf233aa10f19b46a9a58f12563ae/jetified-play-services-base-17.1.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-base/17.1.0/d906658f01adc56396bea0573cf0ee171933e54/play-services-base-17.1.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml	(date 1602787853467)
++++ .idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml	(date 1602787853467)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.customview:customview:1.0.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d1ea25f3382273eed14315b543469208/customview-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dcd86c4e1bc7b82faa13cfa95eb5ce30/customview-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1881c1bcf5de34e12386e4d86a3b60ea/customview-1.0.0/res" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1881c1bcf5de34e12386e4d86a3b60ea/customview-1.0.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1881c1bcf5de34e12386e4d86a3b60ea/customview-1.0.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.customview/customview/1.0.0/61f6a717d144dff3a6bda413d9abeeb2bca71581/customview-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3.xml	(date 1602721290641)
++++ .idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3.xml	(date 1602721290641)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: org.hamcrest:hamcrest-integration:1.3">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-integration/1.3/5de0c73fef18917cd85d0ab70bb23818685e4dfd/hamcrest-integration-1.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-integration/1.3/cc5884d4138d3376f574f6a3992acceedfc37bea/hamcrest-integration-1.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-integration/1.3/ae7787a563e6a1b1f17fd4ac43be3a3c8830cfda/hamcrest-integration-1.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__com_google_auto_value_auto_value_annotations_1_6_5.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__com_google_auto_value_auto_value_annotations_1_6_5.xml	(date 1602787853685)
++++ .idea/libraries/Gradle__com_google_auto_value_auto_value_annotations_1_6_5.xml	(date 1602787853685)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: com.google.auto.value:auto-value-annotations:1.6.5">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.auto.value/auto-value-annotations/1.6.5/c3dad10377f0e2242c9a4b88e9704eaf79103679/auto-value-annotations-1.6.5.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.auto.value/auto-value-annotations/1.6.5/64d2e3142968af0de0767c5205143a2ed322a45d/auto-value-annotations-1.6.5-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.auto.value/auto-value-annotations/1.6.5/3499fd80025705c502699d1154c4b9631cb7a95e/auto-value-annotations-1.6.5-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml	(date 1602787853435)
++++ .idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml	(date 1602787853435)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.activity:activity:1.0.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f52c60a67eb4c2183a64b296ae574169/jetified-activity-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7b541f4196cf846f7dd467165838e072/jetified-activity-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0409a373f27061dff94c0c4632cf879b/jetified-activity-1.0.0/res" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0409a373f27061dff94c0c4632cf879b/jetified-activity-1.0.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0409a373f27061dff94c0c4632cf879b/jetified-activity-1.0.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.activity/activity/1.0.0/28eb83e6a29ac3fbb87aa632cfa0e644a313f491/activity-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__com_google_android_gms_play_services_tasks_17_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__com_google_android_gms_play_services_tasks_17_0_0_aar.xml	(date 1602787853677)
++++ .idea/libraries/Gradle__com_google_android_gms_play_services_tasks_17_0_0_aar.xml	(date 1602787853677)
+@@ -0,0 +1,11 @@
++<component name="libraryTable">
++  <library name="Gradle: com.google.android.gms:play-services-tasks:17.0.0@aar">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/68d7aca381ef598f239f243fc5576c82/jetified-play-services-tasks-17.0.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/68d7aca381ef598f239f243fc5576c82/jetified-play-services-tasks-17.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/68d7aca381ef598f239f243fc5576c82/jetified-play-services-tasks-17.0.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__com_google_firebase_firebase_auth_interop_19_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__com_google_firebase_firebase_auth_interop_19_0_0_aar.xml	(date 1602787853695)
++++ .idea/libraries/Gradle__com_google_firebase_firebase_auth_interop_19_0_0_aar.xml	(date 1602787853695)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: com.google.firebase:firebase-auth-interop:19.0.0@aar">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/82415e5c048d03ba6c564cc3f19bde9a/jetified-firebase-auth-interop-19.0.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/82415e5c048d03ba6c564cc3f19bde9a/jetified-firebase-auth-interop-19.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/82415e5c048d03ba6c564cc3f19bde9a/jetified-firebase-auth-interop-19.0.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-auth-interop/19.0.0/62360008013e207bf91d5b96c09eb0b9a3067393/firebase-auth-interop-19.0.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3.xml	(date 1602721290647)
++++ .idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3.xml	(date 1602721290647)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: org.hamcrest:hamcrest-library:1.3">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-library/1.3/4785a3c21320980282f9f33d0d1264a69040538f/hamcrest-library-1.3.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-library/1.3/4324046c5f99f3dc91b5370899fa3ae65fd137d2/hamcrest-library-1.3-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-library/1.3/47a7ee46628ab7133129cd7cef1e92657bc275e/hamcrest-library-1.3-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__com_google_firebase_firebase_auth_19_4_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__com_google_firebase_firebase_auth_19_4_0_aar.xml	(date 1602787853691)
++++ .idea/libraries/Gradle__com_google_firebase_firebase_auth_19_4_0_aar.xml	(date 1602787853691)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: com.google.firebase:firebase-auth:19.4.0@aar">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6f30c1b5d41727eaf2408732fc89a2d4/jetified-firebase-auth-19.4.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6f30c1b5d41727eaf2408732fc89a2d4/jetified-firebase-auth-19.4.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6f30c1b5d41727eaf2408732fc89a2d4/jetified-firebase-auth-19.4.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-auth/19.4.0/ed1a1d774472db1eeb19ba1379e823356696db23/firebase-auth-19.4.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__com_google_firebase_firebase_components_16_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__com_google_firebase_firebase_components_16_0_0_aar.xml	(date 1602787853705)
++++ .idea/libraries/Gradle__com_google_firebase_firebase_components_16_0_0_aar.xml	(date 1602787853705)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: com.google.firebase:firebase-components:16.0.0@aar">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/915763e66c5bf2b8d0b13f7ce036512a/jetified-firebase-components-16.0.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/915763e66c5bf2b8d0b13f7ce036512a/jetified-firebase-components-16.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/915763e66c5bf2b8d0b13f7ce036512a/jetified-firebase-components-16.0.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-components/16.0.0/f1f25eec68651b3cbe494a265507ac945fdb9e61/firebase-components-16.0.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-components/16.0.0/f5456d4823243672c7135dff6b3a35cd39617610/firebase-components-16.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml	(date 1602787853574)
++++ .idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml	(date 1602787853574)
+@@ -0,0 +1,18 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.print:print:1.0.0@aar">
++    <ANNOTATIONS>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f7b4c14e17ef6ba0e102d9abb4ebb4d8/print-1.0.0/annotations.zip!/" />
++    </ANNOTATIONS>
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/87e4a5cb4839ebd5d033fa0ae6227780/print-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/48eb1e8d8b8ad7006b2f3cf24b65d608/print-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f7b4c14e17ef6ba0e102d9abb4ebb4d8/print-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f7b4c14e17ef6ba0e102d9abb4ebb4d8/print-1.0.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f7b4c14e17ef6ba0e102d9abb4ebb4d8/print-1.0.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.print/print/1.0.0/71fc2d9acf7cce6b96230c5af263268b1664914a/print-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__com_google_firebase_firebase_common_19_3_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__com_google_firebase_firebase_common_19_3_0_aar.xml	(date 1602787853700)
++++ .idea/libraries/Gradle__com_google_firebase_firebase_common_19_3_0_aar.xml	(date 1602787853700)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: com.google.firebase:firebase-common:19.3.0@aar">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/808dcfd3972c389f6bf87665707819cc/jetified-firebase-common-19.3.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/808dcfd3972c389f6bf87665707819cc/jetified-firebase-common-19.3.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/808dcfd3972c389f6bf87665707819cc/jetified-firebase-common-19.3.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-common/19.3.0/8c633ce718daf595bb05a0180d299f0034cbe97e/firebase-common-19.3.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-common/19.3.0/f08fd907064524e4e418b886635e597530f855fc/firebase-common-19.3.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml	(date 1602787853551)
++++ .idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml	(date 1602787853551)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.localbroadcastmanager:localbroadcastmanager:1.0.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d711f81259436f09ffdf0b48105165e3/localbroadcastmanager-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3e9337dfc055970a9422bc379c54bdcb/localbroadcastmanager-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c31ad0ad1b93fab01fe1484fe239c29e/localbroadcastmanager-1.0.0/res" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c31ad0ad1b93fab01fe1484fe239c29e/localbroadcastmanager-1.0.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c31ad0ad1b93fab01fe1484fe239c29e/localbroadcastmanager-1.0.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.localbroadcastmanager/localbroadcastmanager/1.0.0/3930e99159fd6b7f1d2e7d5fe9af0924ca1faf9/localbroadcastmanager-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_3_50.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_3_50.xml	(date 1602787853714)
++++ .idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_3_50.xml	(date 1602787853714)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.3.50">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.50/b529d1738c7e98bbfa36a4134039528f2ce78ebf/kotlin-stdlib-1.3.50.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.50/acd7ffcfdebdbf05b2edba3615968b33241063ea/kotlin-stdlib-1.3.50-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.50/bc0c767786c4a3c042a364e69d3f3dd5ff5253a5/kotlin-stdlib-1.3.50-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__org_jetbrains_annotations_13_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__org_jetbrains_annotations_13_0.xml	(date 1602787853710)
++++ .idea/libraries/Gradle__org_jetbrains_annotations_13_0.xml	(date 1602787853710)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: org.jetbrains:annotations:13.0">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/73368c3b0887f3adc2c2730dd1b95d7c3781aaf3/annotations-13.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/5991ca87ef1fb5544943d9abc5a9a37583fabe03/annotations-13.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_transition_transition_1_0_1_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_transition_transition_1_0_1_aar.xml	(date 1602787853628)
++++ .idea/libraries/Gradle__androidx_transition_transition_1_0_1_aar.xml	(date 1602787853628)
+@@ -0,0 +1,16 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.transition:transition:1.0.1@aar">
++    <ANNOTATIONS>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cec74b6e838ad22ec5c67bc7994088cb/transition-1.0.1/annotations.zip!/" />
++    </ANNOTATIONS>
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cec74b6e838ad22ec5c67bc7994088cb/transition-1.0.1/AndroidManifest.xml" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cec74b6e838ad22ec5c67bc7994088cb/transition-1.0.1/res" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cec74b6e838ad22ec5c67bc7994088cb/transition-1.0.1/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.transition/transition/1.0.1/f0a474b2323f0c20a30339ba60f964d46dc39372/transition-1.0.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_android_1_3_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_android_1_3_0.xml	(date 1602787853724)
++++ .idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_android_1_3_0.xml	(date 1602787853724)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.0">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-android/1.3.0/804a29e0b22cfb30e04487574ad1cb888daa716d/kotlinx-coroutines-android-1.3.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-android/1.3.0/a5b6897df3209e45430a0ee9cd88ec395737d302/kotlinx-coroutines-android-1.3.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-android/1.3.0/392fb03efbcff9124afe8aaa460a00aa2247880/kotlinx-coroutines-android-1.3.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_50.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_50.xml	(date 1602787853718)
++++ .idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_50.xml	(date 1602787853718)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.3.50" type="kotlin.common">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.50/3d9cd3e1bc7b92e95f43d45be3bfbcf38e36ab87/kotlin-stdlib-common-1.3.50.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.50/acd7ffcfdebdbf05b2edba3615968b33241063ea/kotlin-stdlib-common-1.3.50-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.50/8ac406cf33e942265c4abb33ee0acdee79292dd6/kotlin-stdlib-common-1.3.50-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__com_squareup_javawriter_2_1_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__com_squareup_javawriter_2_1_1.xml	(date 1602721290617)
++++ .idea/libraries/Gradle__com_squareup_javawriter_2_1_1.xml	(date 1602721290617)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: com.squareup:javawriter:2.1.1">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.1.1/67ff45d9ae02e583d0f9b3432a5ebbe05c30c966/javawriter-2.1.1.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.1.1/f591a105db78771d0a1e7a277b3747556c528c22/javawriter-2.1.1-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup/javawriter/2.1.1/5b31387d839a5cdaf5b6de3990da01f7f2b963c5/javawriter-2.1.1-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_lifecycle_lifecycle_extensions_2_1_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_lifecycle_lifecycle_extensions_2_1_0_aar.xml	(date 1602787853502)
++++ .idea/libraries/Gradle__androidx_lifecycle_lifecycle_extensions_2_1_0_aar.xml	(date 1602787853502)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.lifecycle:lifecycle-extensions:2.1.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e19c379eb4c78fb74307236692b5e85b/lifecycle-extensions-2.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f9103a5ae6073221e57aca2c0c1c76b5/lifecycle-extensions-2.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/51a01c749d77a7494607e616ac272d1e/lifecycle-extensions-2.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/51a01c749d77a7494607e616ac272d1e/lifecycle-extensions-2.1.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/51a01c749d77a7494607e616ac272d1e/lifecycle-extensions-2.1.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-extensions/2.1.0/84e54bd949cf1843ddddfe3e005b4d3a1649d562/lifecycle-extensions-2.1.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_1_3_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_1_3_0.xml	(date 1602787853728)
++++ .idea/libraries/Gradle__org_jetbrains_kotlinx_kotlinx_coroutines_core_1_3_0.xml	(date 1602787853728)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.0">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core/1.3.0/36fa8555d92456448ec19e64b00be830df9a7fb5/kotlinx-coroutines-core-1.3.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core/1.3.0/8fdb244b797a9318128367d854452bf9db99c417/kotlinx-coroutines-core-1.3.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core/1.3.0/23a4e24d487cf4838494193e8bbf52f332006557/kotlinx-coroutines-core-1.3.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/CampoApp.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/CampoApp.iml	(date 1602721290185)
++++ .idea/CampoApp.iml	(date 1602721290185)
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module external.linked.project.id="CampoApp" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
++  <component name="FacetManager">
++    <facet type="java-gradle" name="Java-Gradle">
++      <configuration>
++        <option name="BUILD_FOLDER_PATH" value="$MODULE_DIR$/build" />
++        <option name="BUILDABLE" value="false" />
++      </configuration>
++    </facet>
++  </component>
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/.gradle" />
++      <excludeFolder url="file://$MODULE_DIR$/build" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(date 1602721290235)
++++ .idea/modules.xml	(date 1602721290235)
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/CampoApp.iml" filepath="$PROJECT_DIR$/.idea/CampoApp.iml" />
++      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CampoApp.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CampoApp.app.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/modules/app/CampoApp.app.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules/app/CampoApp.app.iml	(date 1602789445460)
++++ .idea/modules/app/CampoApp.app.iml	(date 1602789445460)
+@@ -0,0 +1,129 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module external.linked.project.id=":app" external.linked.project.path="$MODULE_DIR$/../../../app" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="CampoApp" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
++  <component name="FacetManager">
++    <facet type="android-gradle" name="Android-Gradle">
++      <configuration>
++        <option name="GRADLE_PROJECT_PATH" value=":app" />
++        <option name="LAST_SUCCESSFUL_SYNC_AGP_VERSION" value="4.1.0" />
++        <option name="LAST_KNOWN_AGP_VERSION" value="4.1.0" />
++      </configuration>
++    </facet>
++    <facet type="android" name="Android">
++      <configuration>
++        <option name="SELECTED_BUILD_VARIANT" value="debug" />
++        <option name="ASSEMBLE_TASK_NAME" value="assembleDebug" />
++        <option name="COMPILE_JAVA_TASK_NAME" value="compileDebugSources" />
++        <afterSyncTasks>
++          <task>generateDebugSources</task>
++        </afterSyncTasks>
++        <option name="ALLOW_USER_CONFIGURATION" value="false" />
++        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
++        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
++        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/main/res;file://$MODULE_DIR$/../../../app/src/debug/res;file://$MODULE_DIR$/../../../app/build/generated/res/google-services/debug;file://$MODULE_DIR$/../../../app/build/generated/res/rs/debug;file://$MODULE_DIR$/../../../app/build/generated/res/resValues/debug" />
++        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/androidTest/res;file://$MODULE_DIR$/../../../app/src/androidTestDebug/res;file://$MODULE_DIR$/../../../app/build/generated/res/rs/androidTest/debug;file://$MODULE_DIR$/../../../app/build/generated/res/resValues/androidTest/debug" />
++        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
++      </configuration>
++    </facet>
++  </component>
++  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
++    <output url="file://$MODULE_DIR$/../../../app/build/intermediates/javac/debug/classes" />
++    <output-test url="file://$MODULE_DIR$/../../../app/build/intermediates/javac/debugUnitTest/classes" />
++    <exclude-output />
++    <content url="file://$MODULE_DIR$/../../../app">
++      <sourceFolder url="file://$MODULE_DIR$/../../../app/src/main/java" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/../../../app/src/androidTest/java" isTestSource="true" />
++      <sourceFolder url="file://$MODULE_DIR$/../../../app/src/test/java" isTestSource="true" />
++      <sourceFolder url="file://$MODULE_DIR$/../../../app/src/main/res" type="java-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/ap_generated_sources/debug/out" isTestSource="false" generated="true" />
++      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
++      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/res/google-services/debug" type="java-resource" />
++      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/res/resValues/debug" type="java-resource" />
++      <excludeFolder url="file://$MODULE_DIR$/../../../app/.gradle" />
++      <excludeFolder url="file://$MODULE_DIR$/../../../app/build" />
++      <excludeFolder url="file://$MODULE_DIR$/../../../app/src/main/java/com/example/campoapp/data/login" />
++    </content>
++    <orderEntry type="jdk" jdkName="Android API 30 Platform" jdkType="Android SDK" />
++    <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" name="Gradle: androidx.arch.core:core-common:2.1.0" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-common:2.2.0" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.collection:collection:1.1.0" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.annotation:annotation:1.1.0" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.constraintlayout:constraintlayout-solver:2.0.2" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.auto.value:auto-value-annotations:1.6.5" level="project" />
++    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.0" level="project" />
++    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.0" level="project" />
++    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.3.50" level="project" />
++    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.3.50" level="project" />
++    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.constraintlayout:constraintlayout:2.0.2@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.navigation:navigation-ui:2.1.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.android.material:material:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.appcompat:appcompat:1.2.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.legacy:legacy-support-v4:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.navigation:navigation-fragment:2.1.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-extensions:2.1.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: com.firebaseui:firebase-ui-auth:6.1.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-auth:19.4.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-auth:17.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-auth-interop:19.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-auth-api-phone:17.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-auth-base:17.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-base:17.1.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-common:19.3.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-tasks:17.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-basement:17.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.fragment:fragment:1.1.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.appcompat:appcompat-resources:1.2.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.recyclerview:recyclerview:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.legacy:legacy-support-core-ui:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.drawerlayout:drawerlayout:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.media:media:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.legacy:legacy-support-core-utils:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.transition:transition:1.0.1@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.viewpager:viewpager:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.loader:loader:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.navigation:navigation-runtime:2.1.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.activity:activity:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.vectordrawable:vectordrawable-animated:1.1.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.vectordrawable:vectordrawable:1.1.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.coordinatorlayout:coordinatorlayout:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.slidingpanelayout:slidingpanelayout:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.customview:customview:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.swiperefreshlayout:swiperefreshlayout:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.asynclayoutinflater:asynclayoutinflater:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.navigation:navigation-common:2.1.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.core:core:1.3.1@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.cursoradapter:cursoradapter:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.cardview:cardview:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-process:2.1.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-service:2.1.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-runtime:2.1.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-livedata-ktx:2.2.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-livedata:2.2.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-livedata-core:2.2.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.arch.core:core-runtime:2.1.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.savedstate:savedstate:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-viewmodel:2.2.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.versionedparcelable:versionedparcelable:1.1.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.localbroadcastmanager:localbroadcastmanager:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.firebase:firebase-components:16.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.documentfile:documentfile:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.print:print:1.0.0@aar" level="project" />
++    <orderEntry type="library" name="Gradle: androidx.interpolator:interpolator:1.0.0@aar" level="project" />
++    <orderEntry type="library" scope="TEST" name="Gradle: junit:junit:4.12" level="project" />
++    <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-integration:1.3" level="project" />
++    <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-library:1.3" level="project" />
++    <orderEntry type="library" scope="TEST" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
++    <orderEntry type="library" scope="TEST" name="Gradle: com.squareup:javawriter:2.1.1" level="project" />
++    <orderEntry type="library" scope="TEST" name="Gradle: javax.inject:javax.inject:1" level="project" />
++    <orderEntry type="library" scope="TEST" name="Gradle: com.google.code.findbugs:jsr305:2.0.1" level="project" />
++    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.ext:junit:1.1.2@aar" level="project" />
++    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.espresso:espresso-core:3.3.0@aar" level="project" />
++    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:runner:1.3.0@aar" level="project" />
++    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:core:1.3.0@aar" level="project" />
++    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:monitor:1.3.0@aar" level="project" />
++    <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.espresso:espresso-idling-resource:3.3.0@aar" level="project" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml	(date 1602787853643)
++++ .idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml	(date 1602787853643)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.viewpager:viewpager:1.0.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ebc8011c39d26c440b76466a9b971345/viewpager-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b437c8e4cf053fd87bc8836cb75ffd62/viewpager-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cf63d42212627e4a7263d348980319c4/viewpager-1.0.0/res" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cf63d42212627e4a7263d348980319c4/viewpager-1.0.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cf63d42212627e4a7263d348980319c4/viewpager-1.0.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.viewpager/viewpager/1.0.0/db045f92188b9d247d5f556866f8861ab68528f0/viewpager-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_collection_collection_1_1_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_collection_collection_1_1_0.xml	(date 1602721290323)
++++ .idea/libraries/Gradle__androidx_collection_collection_1_1_0.xml	(date 1602721290323)
+@@ -0,0 +1,11 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.collection:collection:1.1.0">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.1.0/1f27220b47669781457de0d600849a5de0e89909/collection-1.1.0.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.1.0/bae67b0019fbb38498198fcc2d0282a340b71c5b/collection-1.1.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_3_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_3_0_aar.xml	(date 1602787853593)
++++ .idea/libraries/Gradle__androidx_test_espresso_espresso_core_3_3_0_aar.xml	(date 1602787853593)
+@@ -0,0 +1,17 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.test.espresso:espresso-core:3.3.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b9216b197ae49deffbb5496548ea9b34/espresso-core-3.3.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2b4203b753116c8c7627ae74147f89fa/espresso-core-3.3.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/075ffe8f3a0d9ac88884369405d4b54c/espresso-core-3.3.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/075ffe8f3a0d9ac88884369405d4b54c/espresso-core-3.3.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/075ffe8f3a0d9ac88884369405d4b54c/espresso-core-3.3.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.test.espresso/espresso-core/3.3.0/8da4ff80a40b70b852341a5ad99c943811400eec/espresso-core-3.3.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.test.espresso/espresso-core/3.3.0/1b378d81de64c2e4740b0856c4ed65c1b76ea1b2/espresso-core-3.3.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml	(date 1602787853583)
++++ .idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml	(date 1602787853583)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.slidingpanelayout:slidingpanelayout:1.0.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/aa2f1cd22069a9bb65f1845d902d729f/slidingpanelayout-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/30364a4e1d148d54a282aaa580ec2e4d/slidingpanelayout-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4d563c2af3385fcc13d436fe431390e3/slidingpanelayout-1.0.0/res" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4d563c2af3385fcc13d436fe431390e3/slidingpanelayout-1.0.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4d563c2af3385fcc13d436fe431390e3/slidingpanelayout-1.0.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.slidingpanelayout/slidingpanelayout/1.0.0/f3f2e4fded24d5969a86e1974ad7e96975d970a0/slidingpanelayout-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/navEditor.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/navEditor.xml	(date 1602784033688)
++++ .idea/navEditor.xml	(date 1602784033688)
+@@ -0,0 +1,55 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="navEditor-manualLayoutAlgorithm2">
++    <option name="myPositions">
++      <map>
++        <entry key="mobile_navigation.xml">
++          <value>
++            <LayoutPositions>
++              <option name="myPositions">
++                <map>
++                  <entry key="nav_gallery">
++                    <value>
++                      <LayoutPositions>
++                        <option name="myPosition">
++                          <Point>
++                            <option name="x" value="292" />
++                            <option name="y" value="12" />
++                          </Point>
++                        </option>
++                      </LayoutPositions>
++                    </value>
++                  </entry>
++                  <entry key="nav_home">
++                    <value>
++                      <LayoutPositions>
++                        <option name="myPosition">
++                          <Point>
++                            <option name="x" value="12" />
++                            <option name="y" value="12" />
++                          </Point>
++                        </option>
++                      </LayoutPositions>
++                    </value>
++                  </entry>
++                  <entry key="nav_slideshow">
++                    <value>
++                      <LayoutPositions>
++                        <option name="myPosition">
++                          <Point>
++                            <option name="x" value="12" />
++                            <option name="y" value="432" />
++                          </Point>
++                        </option>
++                      </LayoutPositions>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </LayoutPositions>
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_lifecycle_lifecycle_service_2_1_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_lifecycle_lifecycle_service_2_1_0_aar.xml	(date 1602787853533)
++++ .idea/libraries/Gradle__androidx_lifecycle_lifecycle_service_2_1_0_aar.xml	(date 1602787853533)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.lifecycle:lifecycle-service:2.1.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f9da1c5dce99d4a880107d6346aac466/jetified-lifecycle-service-2.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0479cb62b5a1ccc023c4fb301572a7ab/jetified-lifecycle-service-2.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ebd46f0c6ecd55bcd04339b41bba39c9/jetified-lifecycle-service-2.1.0/res" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ebd46f0c6ecd55bcd04339b41bba39c9/jetified-lifecycle-service-2.1.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ebd46f0c6ecd55bcd04339b41bba39c9/jetified-lifecycle-service-2.1.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-service/2.1.0/8fea0db3aaed284d86f63be3977c01b156585cb2/lifecycle-service-2.1.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml	(date 1602787853484)
++++ .idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml	(date 1602787853484)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.legacy:legacy-support-core-ui:1.0.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f5ec57ec49d0a3e9add695de66a9078c/legacy-support-core-ui-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9d4053b57d170770335ff225b77d62ba/legacy-support-core-ui-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b5d2fbcb3dba081ebae9a5f69e0e325f/legacy-support-core-ui-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b5d2fbcb3dba081ebae9a5f69e0e325f/legacy-support-core-ui-1.0.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b5d2fbcb3dba081ebae9a5f69e0e325f/legacy-support-core-ui-1.0.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.legacy/legacy-support-core-ui/1.0.0/f6044eaebe354c778f1f147ddb9e92a3f1e22fc7/legacy-support-core-ui-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_annotation_annotation_1_1_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_annotation_annotation_1_1_0.xml	(date 1602721290267)
++++ .idea/libraries/Gradle__androidx_annotation_annotation_1_1_0.xml	(date 1602721290267)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.annotation:annotation:1.1.0">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.1.0/e3a6fb2f40e3a3842e6b7472628ba4ce416ea4c8/annotation-1.1.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.1.0/408af38ec57369afe3fd6466e1c4bfdd5f15fc92/annotation-1.1.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.1.0/8b7bdc00eb4d998bfbc76767b098620990f2a805/annotation-1.1.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml	(date 1602787853481)
++++ .idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml	(date 1602787853481)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.interpolator:interpolator:1.0.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bcf856ddfeb04b3b73ed182739910d39/interpolator-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/884715ee5d4759e99f0bf4b3058e7279/interpolator-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9e199f9b2806f9a73d8410e7b25bbd9a/interpolator-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9e199f9b2806f9a73d8410e7b25bbd9a/interpolator-1.0.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9e199f9b2806f9a73d8410e7b25bbd9a/interpolator-1.0.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.interpolator/interpolator/1.0.0/fefd5e3cbc479b6b4a9532d05688a1e659e8d3d2/interpolator-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__com_google_android_material_material_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__com_google_android_material_material_1_0_0_aar.xml	(date 1602787853680)
++++ .idea/libraries/Gradle__com_google_android_material_material_1_0_0_aar.xml	(date 1602787853680)
+@@ -0,0 +1,14 @@
++<component name="libraryTable">
++  <library name="Gradle: com.google.android.material:material:1.0.0@aar">
++    <ANNOTATIONS>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/865ca3f32c76afcda3dae57e5565c07d/material-1.0.0/annotations.zip!/" />
++    </ANNOTATIONS>
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/865ca3f32c76afcda3dae57e5565c07d/material-1.0.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/865ca3f32c76afcda3dae57e5565c07d/material-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/865ca3f32c76afcda3dae57e5565c07d/material-1.0.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_appcompat_appcompat_1_2_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_appcompat_appcompat_1_2_0_aar.xml	(date 1602787853439)
++++ .idea/libraries/Gradle__androidx_appcompat_appcompat_1_2_0_aar.xml	(date 1602787853439)
+@@ -0,0 +1,16 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.appcompat:appcompat:1.2.0@aar">
++    <ANNOTATIONS>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/354e191bb34cbb76f8d395d8741dc10c/appcompat-1.2.0/annotations.zip!/" />
++    </ANNOTATIONS>
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/354e191bb34cbb76f8d395d8741dc10c/appcompat-1.2.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/354e191bb34cbb76f8d395d8741dc10c/appcompat-1.2.0/AndroidManifest.xml" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/354e191bb34cbb76f8d395d8741dc10c/appcompat-1.2.0/res" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.appcompat/appcompat/1.2.0/13e8ff89631c2e101eb6bddd12c2fb4bbd74b15d/appcompat-1.2.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml	(date 1602787853458)
++++ .idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml	(date 1602787853458)
+@@ -0,0 +1,16 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.coordinatorlayout:coordinatorlayout:1.0.0@aar">
++    <ANNOTATIONS>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3ac1a2af9dfbe4a8ca26ec28cba6a62d/coordinatorlayout-1.0.0/annotations.zip!/" />
++    </ANNOTATIONS>
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3ac1a2af9dfbe4a8ca26ec28cba6a62d/coordinatorlayout-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3ac1a2af9dfbe4a8ca26ec28cba6a62d/coordinatorlayout-1.0.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3ac1a2af9dfbe4a8ca26ec28cba6a62d/coordinatorlayout-1.0.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.coordinatorlayout/coordinatorlayout/1.0.0/4325b3c4422ad58201ed8dc15ae56bda9accedf2/coordinatorlayout-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml	(date 1602787853547)
++++ .idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml	(date 1602787853547)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.loader:loader:1.0.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2118a7099009bdd29f0289728ee82c0d/loader-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a8f36a69659c55a007f35cfecb9dcfc6/loader-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5d579bc30320f2e23ade44a611dc667d/loader-1.0.0/res" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5d579bc30320f2e23ade44a611dc667d/loader-1.0.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5d579bc30320f2e23ade44a611dc667d/loader-1.0.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.loader/loader/1.0.0/b9ef587f3e46c7fe5b00264989764e43ff45cada/loader-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml	(date 1602787853471)
++++ .idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml	(date 1602787853471)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.documentfile:documentfile:1.0.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7bcdab9edca68925f6bcb92ddd8a20de/documentfile-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9b14025540e1c0e0278fee415366684e/documentfile-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/86723420d28af30ba5283a8ea44c4773/documentfile-1.0.0/res" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/86723420d28af30ba5283a8ea44c4773/documentfile-1.0.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/86723420d28af30ba5283a8ea44c4773/documentfile-1.0.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.documentfile/documentfile/1.0.0/a1bed5cf96db96bd06a2feade98fe55653811dc8/documentfile-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml	(date 1602787853448)
++++ .idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml	(date 1602787853448)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.asynclayoutinflater:asynclayoutinflater:1.0.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f1f8381ec1e1c3f6b165a08612cfd883/asynclayoutinflater-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/18aae0e1403cb9536d945989108c14a5/asynclayoutinflater-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6a6c506b879340828bb7b9dcab91be12/asynclayoutinflater-1.0.0/res" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6a6c506b879340828bb7b9dcab91be12/asynclayoutinflater-1.0.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6a6c506b879340828bb7b9dcab91be12/asynclayoutinflater-1.0.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.asynclayoutinflater/asynclayoutinflater/1.0.0/ac4d50701fce5c88dcc514f58e695cd32f05134c/asynclayoutinflater-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml	(date 1602787853555)
++++ .idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml	(date 1602787853555)
+@@ -0,0 +1,16 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.media:media:1.0.0@aar">
++    <ANNOTATIONS>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b471976cbebae29937843351f52e3b5a/media-1.0.0/annotations.zip!/" />
++    </ANNOTATIONS>
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b471976cbebae29937843351f52e3b5a/media-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b471976cbebae29937843351f52e3b5a/media-1.0.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b471976cbebae29937843351f52e3b5a/media-1.0.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.media/media/1.0.0/5faf25be15e16e27275f5c7e04e15e944ebccea0/media-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_1_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_1_0_aar.xml	(date 1602787853530)
++++ .idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_1_0_aar.xml	(date 1602787853530)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.lifecycle:lifecycle-runtime:2.1.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/098c479f6892902db16f6d5e04f3818b/lifecycle-runtime-2.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/eb25aa6fb92793269536cebf4ca0a993/lifecycle-runtime-2.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3a585cdae8051e11e543a56709eebc2d/lifecycle-runtime-2.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3a585cdae8051e11e543a56709eebc2d/lifecycle-runtime-2.1.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3a585cdae8051e11e543a56709eebc2d/lifecycle-runtime-2.1.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-runtime/2.1.0/533a0cd1a095abbdfd08a49c4d34bd0713977034/lifecycle-runtime-2.1.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml	(date 1602787853636)
++++ .idea/libraries/Gradle__androidx_vectordrawable_vectordrawable_animated_1_1_0_aar.xml	(date 1602787853636)
+@@ -0,0 +1,15 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.vectordrawable:vectordrawable-animated:1.1.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/32488318cfc756fa0f6ae91e625fa530/vectordrawable-animated-1.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/715ac09ebebe6f055fd8c27935b09c71/vectordrawable-animated-1.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d55e0919dfbd980801e56a21c1bfc862/vectordrawable-animated-1.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d55e0919dfbd980801e56a21c1bfc862/vectordrawable-animated-1.1.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d55e0919dfbd980801e56a21c1bfc862/vectordrawable-animated-1.1.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.vectordrawable/vectordrawable-animated/1.1.0/871a7705cd03bc246947638c712cdd11378233ff/vectordrawable-animated-1.1.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__com_google_android_gms_play_services_basement_17_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__com_google_android_gms_play_services_basement_17_0_0_aar.xml	(date 1602789445587)
++++ .idea/libraries/Gradle__com_google_android_gms_play_services_basement_17_0_0_aar.xml	(date 1602789445587)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: com.google.android.gms:play-services-basement:17.0.0@aar">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2f3931a74b13a0da0ca4f47c74803da/jetified-play-services-basement-17.0.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2f3931a74b13a0da0ca4f47c74803da/jetified-play-services-basement-17.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2f3931a74b13a0da0ca4f47c74803da/jetified-play-services-basement-17.0.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-basement/17.0.0/4faccf8c10bad282388a4067b8ef53d8476bbbc8/play-services-basement-17.0.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__com_google_android_gms_play_services_auth_17_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__com_google_android_gms_play_services_auth_17_0_0_aar.xml	(date 1602789445583)
++++ .idea/libraries/Gradle__com_google_android_gms_play_services_auth_17_0_0_aar.xml	(date 1602789445583)
+@@ -0,0 +1,11 @@
++<component name="libraryTable">
++  <library name="Gradle: com.google.android.gms:play-services-auth:17.0.0@aar">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6110b9bdb3379ef5934ad9687a41e525/jetified-play-services-auth-17.0.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6110b9bdb3379ef5934ad9687a41e525/jetified-play-services-auth-17.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6110b9bdb3379ef5934ad9687a41e525/jetified-play-services-auth-17.0.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES />
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml	(date 1602787853451)
++++ .idea/libraries/Gradle__androidx_cardview_cardview_1_0_0_aar.xml	(date 1602787853451)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.cardview:cardview:1.0.0@aar">
++    <CLASSES>
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8643ae54d559984bab3831e941efe634/cardview-1.0.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8643ae54d559984bab3831e941efe634/cardview-1.0.0/AndroidManifest.xml" />
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8643ae54d559984bab3831e941efe634/cardview-1.0.0/jars/classes.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.cardview/cardview/1.0.0/c9f3ce7ca74ad2c978230f4094ba6804c5166f9c/cardview-1.0.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__androidx_navigation_navigation_ui_2_1_0_aar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__androidx_navigation_navigation_ui_2_1_0_aar.xml	(date 1602787853569)
++++ .idea/libraries/Gradle__androidx_navigation_navigation_ui_2_1_0_aar.xml	(date 1602787853569)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: androidx.navigation:navigation-ui:2.1.0@aar">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/880e9099bf25f51b987dccb4f85a7383/navigation-ui-2.1.0/jars/classes.jar!/" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/880e9099bf25f51b987dccb4f85a7383/navigation-ui-2.1.0/res" />
++      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/880e9099bf25f51b987dccb4f85a7383/navigation-ui-2.1.0/AndroidManifest.xml" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.navigation/navigation-ui/2.1.0/7efb6a20e39a1af8e697b786a33dcc828cefba69/navigation-ui-2.1.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/Gradle__junit_junit_4_12.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Gradle__junit_junit_4_12.xml	(date 1602721290628)
++++ .idea/libraries/Gradle__junit_junit_4_12.xml	(date 1602721290628)
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Gradle: junit:junit:4.12">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/941a8be4506c65f0a9001c08812fb7da1e505e21/junit-4.12-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file

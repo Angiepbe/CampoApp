@@ -1,0 +1,1402 @@
+Index: .gitignore
+===================================================================
+--- .gitignore	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ .gitignore	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,14 +0,0 @@
+-*.iml
+-.gradle
+-/local.properties
+-/.idea/caches
+-/.idea/libraries
+-/.idea/modules.xml
+-/.idea/workspace.xml
+-/.idea/navEditor.xml
+-/.idea/assetWizardSettings.xml
+-.DS_Store
+-/build
+-/captures
+-.externalNativeBuild
+-.cxx
+Index: app/.gitignore
+===================================================================
+--- app/.gitignore	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/.gitignore	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,1 +0,0 @@
+-/build
+\ No newline at end of file
+Index: app/src/main/res/drawable-v21/ic_menu_gallery.xml
+===================================================================
+--- app/src/main/res/drawable-v21/ic_menu_gallery.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/res/drawable-v21/ic_menu_gallery.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,9 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="24dp"
+-    android:height="24dp"
+-    android:viewportWidth="24.0"
+-    android:viewportHeight="24.0">
+-    <path
+-        android:fillColor="#FF000000"
+-        android:pathData="M22,16V4c0,-1.1 -0.9,-2 -2,-2H8c-1.1,0 -2,0.9 -2,2v12c0,1.1 0.9,2 2,2h12c1.1,0 2,-0.9 2,-2zm-11,-4l2.03,2.71L16,11l4,5H8l3,-4zM2,6v14c0,1.1 0.9,2 2,2h14v-2H4V6H2z" />
+-</vector>
+Index: app/src/main/res/layout/activity_asistente_virtual.xml
+===================================================================
+--- app/src/main/res/layout/activity_asistente_virtual.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/res/layout/activity_asistente_virtual.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,106 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    android:background="#DAE475"
+-    tools:context=".AsistenteVirtual">
+-
+-    <ImageView
+-        android:id="@+id/imageView3"
+-        android:layout_width="120dp"
+-        android:layout_height="120dp"
+-        android:layout_marginTop="16dp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.498"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        app:srcCompat="@drawable/asistentevirtual" />
+-
+-    <androidx.cardview.widget.CardView
+-        android:id="@+id/cardView2"
+-        android:layout_width="316dp"
+-        android:layout_height="117dp"
+-        android:layout_marginStart="50dp"
+-        android:layout_marginLeft="50dp"
+-        android:layout_marginTop="16dp"
+-        android:layout_marginEnd="50dp"
+-        android:layout_marginRight="50dp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+-
+-        <LinearLayout
+-            android:layout_width="match_parent"
+-            android:layout_height="match_parent"
+-            android:orientation="vertical">
+-
+-            <TextView
+-                android:id="@+id/textView10"
+-                android:layout_width="match_parent"
+-                android:layout_height="50dp"
+-                android:padding="10dp"
+-                android:text="Escuchando"
+-                android:textColor="@color/cardview_dark_background" />
+-
+-            <TextView
+-                android:id="@+id/tvEscuhado"
+-                android:layout_width="match_parent"
+-                android:layout_height="67dp"
+-                android:padding="10dp"
+-                tools:text="@string/Escuchar" />
+-        </LinearLayout>
+-
+-    </androidx.cardview.widget.CardView>
+-
+-    <androidx.cardview.widget.CardView
+-        android:id="@+id/cardView"
+-        android:layout_width="314dp"
+-        android:layout_height="122dp"
+-        android:layout_marginStart="90dp"
+-        android:layout_marginLeft="90dp"
+-        android:layout_marginTop="16dp"
+-        android:layout_marginEnd="50dp"
+-        android:layout_marginRight="50dp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.769"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+-
+-        <LinearLayout
+-            android:layout_width="match_parent"
+-            android:layout_height="match_parent"
+-            android:orientation="vertical">
+-
+-            <TextView
+-                android:id="@+id/textView8"
+-                android:layout_width="match_parent"
+-                android:layout_height="50dp"
+-                android:padding="10dp"
+-                android:text="Respondiendo"
+-                android:textColor="@color/cardview_dark_background" />
+-
+-            <TextView
+-                android:id="@+id/TvRespondiendo"
+-                android:layout_width="match_parent"
+-                android:layout_height="67dp"
+-                android:padding="10dp"
+-                tools:text="@string/Responder" />
+-        </LinearLayout>
+-    </androidx.cardview.widget.CardView>
+-
+-    <ImageButton
+-        android:id="@+id/imageButton"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="20dp"
+-        android:background="#CDDC39"
+-        android:onClick="Hablar"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.498"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toBottomOf="@+id/cardView"
+-        app:srcCompat="@drawable/siri" />
+-
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+===================================================================
+--- app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,5 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+-    <background android:drawable="@drawable/ic_launcher_background" />
+-    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+-</adaptive-icon>
+\ No newline at end of file
+Index: app/src/main/java/com/example/campoapp/ui/home/HomeFragment.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/ui/home/HomeFragment.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/java/com/example/campoapp/ui/home/HomeFragment.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,35 +0,0 @@
+-package com.example.campoapp.ui.home;
+-
+-import android.os.Bundle;
+-import android.view.LayoutInflater;
+-import android.view.View;
+-import android.view.ViewGroup;
+-import android.widget.TextView;
+-
+-import androidx.annotation.NonNull;
+-import androidx.annotation.Nullable;
+-import androidx.fragment.app.Fragment;
+-import androidx.lifecycle.Observer;
+-import androidx.lifecycle.ViewModelProviders;
+-
+-import com.example.campoapp.R;
+-
+-public class HomeFragment extends Fragment {
+-
+-    private HomeViewModel homeViewModel;
+-
+-    public View onCreateView(@NonNull LayoutInflater inflater,
+-                             ViewGroup container, Bundle savedInstanceState) {
+-        homeViewModel =
+-                ViewModelProviders.of(this).get(HomeViewModel.class);
+-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+-        final TextView textView = root.findViewById(R.id.text_home);
+-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+-            @Override
+-            public void onChanged(@Nullable String s) {
+-                textView.setText(s);
+-            }
+-        });
+-        return root;
+-    }
+-}
+\ No newline at end of file
+Index: app/src/test/java/com/example/campoapp/ExampleUnitTest.java
+===================================================================
+--- app/src/test/java/com/example/campoapp/ExampleUnitTest.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/test/java/com/example/campoapp/ExampleUnitTest.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,17 +0,0 @@
+-package com.example.campoapp;
+-
+-import org.junit.Test;
+-
+-import static org.junit.Assert.*;
+-
+-/**
+- * Example local unit test, which will execute on the development machine (host).
+- *
+- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
+- */
+-public class ExampleUnitTest {
+-    @Test
+-    public void addition_isCorrect() {
+-        assertEquals(4, 2 + 2);
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+===================================================================
+--- app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,5 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+-    <background android:drawable="@drawable/ic_launcher_background" />
+-    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+-</adaptive-icon>
+\ No newline at end of file
+Index: app/src/main/res/drawable/ic_launcher_background.xml
+===================================================================
+--- app/src/main/res/drawable/ic_launcher_background.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/res/drawable/ic_launcher_background.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,170 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="108dp"
+-    android:height="108dp"
+-    android:viewportWidth="108"
+-    android:viewportHeight="108">
+-    <path
+-        android:fillColor="#3DDC84"
+-        android:pathData="M0,0h108v108h-108z" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M9,0L9,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,0L19,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M29,0L29,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M39,0L39,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M49,0L49,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M59,0L59,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M69,0L69,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M79,0L79,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M89,0L89,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M99,0L99,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,9L108,9"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,19L108,19"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,29L108,29"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,39L108,39"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,49L108,49"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,59L108,59"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,69L108,69"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,79L108,79"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,89L108,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,99L108,99"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,29L89,29"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,39L89,39"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,49L89,49"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,59L89,59"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,69L89,69"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,79L89,79"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M29,19L29,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M39,19L39,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M49,19L49,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M59,19L59,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M69,19L69,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M79,19L79,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-</vector>
+Index: app/src/main/res/drawable-v21/ic_menu_slideshow.xml
+===================================================================
+--- app/src/main/res/drawable-v21/ic_menu_slideshow.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/res/drawable-v21/ic_menu_slideshow.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,9 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="24dp"
+-    android:height="24dp"
+-    android:viewportWidth="24.0"
+-    android:viewportHeight="24.0">
+-    <path
+-        android:fillColor="#FF000000"
+-        android:pathData="M4,6H2v14c0,1.1 0.9,2 2,2h14v-2H4V6zm16,-4H8c-1.1,0 -2,0.9 -2,2v12c0,1.1 0.9,2 2,2h12c1.1,0 2,-0.9 2,-2V4c0,-1.1 -0.9,-2 -2,-2zm-8,12.5v-9l6,4.5 -6,4.5z" />
+-</vector>
+Index: app/src/main/res/values/colors.xml
+===================================================================
+--- app/src/main/res/values/colors.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/res/values/colors.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<resources>
+-    <color name="colorPrimary">#6200EE</color>
+-    <color name="colorPrimaryDark">#3700B3</color>
+-    <color name="colorAccent">#03DAC5</color>
+-</resources>
+\ No newline at end of file
+Index: app/src/main/java/com/example/campoapp/AsistenteVirtual.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/AsistenteVirtual.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/java/com/example/campoapp/AsistenteVirtual.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,102 +0,0 @@
+-package com.example.campoapp;
+-
+-import androidx.annotation.Nullable;
+-import androidx.appcompat.app.AppCompatActivity;
+-
+-import android.content.Intent;
+-import android.os.Build;
+-import android.os.Bundle;
+-import android.speech.RecognizerIntent;
+-import android.speech.tts.TextToSpeech;
+-import android.view.View;
+-import android.widget.TextView;
+-
+-import java.text.Normalizer;
+-import java.util.ArrayList;
+-
+-public class AsistenteVirtual extends AppCompatActivity implements TextToSpeech.OnInitListener {
+-
+-    private static final int RECONOCEDOR_VOZ = 7;
+-    private TextView escuchando;
+-    private TextView responder;
+-    private ArrayList<Respuesta> respuestas;
+-    private TextToSpeech leerV;
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_asistente_virtual);
+-        escuchando=(TextView) findViewById(R.id.tvEscuhado);
+-        responder=(TextView) findViewById(R.id.TvRespondiendo);
+-        respuestas=proveerDatos();
+-        leerV=new TextToSpeech(this,this);
+-    }
+-
+-    @Override
+-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+-        super.onActivityResult(requestCode, resultCode, data);
+-
+-        //Evaluar si el resultado es el correcto
+-
+-        if(resultCode==RESULT_OK && requestCode==RECONOCEDOR_VOZ){
+-            ArrayList<String> reconocido= data.getStringArrayListExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL);//Almacenando el dato
+-            String escuchado=reconocido.get(0);
+-            escuchando.setText(escuchado);
+-            prepararRespuesta(escuchado);
+-        }
+-    }
+-
+-    public void Hablar (View view ){
+-        Intent hablar =new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+-        hablar.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,"es-MX");
+-        startActivityForResult(hablar,RECONOCEDOR_VOZ);
+-    }
+-
+-    public void prepararRespuesta (String escuchado){
+-        //Normalizar texto
+-        String normalizar= Normalizer.normalize(escuchado,Normalizer.Form.NFD);
+-        String sintilde = normalizar.replaceAll("[^\\p{ASCII}]","");
+-
+-        int res;
+-        String responder = respuestas.get(0).getRespuesta();
+-
+-        //Recorrer array
+-        for (int i=0;i<respuestas.size();i++){
+-            //Buscar posicion
+-            res=sintilde.toLowerCase().indexOf(respuestas.get(1).getCuestion());
+-
+-            if(res!=1){
+-                responder= respuestas.get(i).getRespuesta();
+-
+-            }
+-        }
+-        Responder(responder);
+-
+-    }
+-
+-    private void Responder(String respuestita) {
+-        responder.setText(respuestita);
+-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+-            leerV.speak(respuestita,TextToSpeech.QUEUE_FLUSH,null,null);
+-        }else{
+-            leerV.speak(respuestita,TextToSpeech.QUEUE_FLUSH,null);
+-        }
+-
+-
+-    }
+-
+-    public ArrayList<Respuesta> proveerDatos(){
+-        ArrayList<Respuesta> respuesta = new ArrayList<>();
+-        respuesta.add(new Respuesta ("defecto","Aun no estoy programada para responder eso"));
+-        respuesta.add(new Respuesta ("hola","Hola, ¿Que tal?"));
+-        respuesta.add(new Respuesta ("informacion","Nececitas información acerca de un producto"));
+-        respuesta.add(new Respuesta ("como estas","Bien, ¿En que te puedo colaborar?"));
+-        return respuesta;
+-    }
+-
+-
+-    @Override
+-    public void onInit(int i) {
+-
+-    }
+-}
+\ No newline at end of file
+Index: gradlew.bat
+===================================================================
+--- gradlew.bat	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ gradlew.bat	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,84 +0,0 @@
+-@if "%DEBUG%" == "" @echo off
+-@rem ##########################################################################
+-@rem
+-@rem  Gradle startup script for Windows
+-@rem
+-@rem ##########################################################################
+-
+-@rem Set local scope for the variables with windows NT shell
+-if "%OS%"=="Windows_NT" setlocal
+-
+-set DIRNAME=%~dp0
+-if "%DIRNAME%" == "" set DIRNAME=.
+-set APP_BASE_NAME=%~n0
+-set APP_HOME=%DIRNAME%
+-
+-@rem Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
+-set DEFAULT_JVM_OPTS=
+-
+-@rem Find java.exe
+-if defined JAVA_HOME goto findJavaFromJavaHome
+-
+-set JAVA_EXE=java.exe
+-%JAVA_EXE% -version >NUL 2>&1
+-if "%ERRORLEVEL%" == "0" goto init
+-
+-echo.
+-echo ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
+-echo.
+-echo Please set the JAVA_HOME variable in your environment to match the
+-echo location of your Java installation.
+-
+-goto fail
+-
+-:findJavaFromJavaHome
+-set JAVA_HOME=%JAVA_HOME:"=%
+-set JAVA_EXE=%JAVA_HOME%/bin/java.exe
+-
+-if exist "%JAVA_EXE%" goto init
+-
+-echo.
+-echo ERROR: JAVA_HOME is set to an invalid directory: %JAVA_HOME%
+-echo.
+-echo Please set the JAVA_HOME variable in your environment to match the
+-echo location of your Java installation.
+-
+-goto fail
+-
+-:init
+-@rem Get command-line arguments, handling Windows variants
+-
+-if not "%OS%" == "Windows_NT" goto win9xME_args
+-
+-:win9xME_args
+-@rem Slurp the command line arguments.
+-set CMD_LINE_ARGS=
+-set _SKIP=2
+-
+-:win9xME_args_slurp
+-if "x%~1" == "x" goto execute
+-
+-set CMD_LINE_ARGS=%*
+-
+-:execute
+-@rem Setup the command line
+-
+-set CLASSPATH=%APP_HOME%\gradle\wrapper\gradle-wrapper.jar
+-
+-@rem Execute Gradle
+-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% "-Dorg.gradle.appname=%APP_BASE_NAME%" -classpath "%CLASSPATH%" org.gradle.wrapper.GradleWrapperMain %CMD_LINE_ARGS%
+-
+-:end
+-@rem End local scope for the variables with windows NT shell
+-if "%ERRORLEVEL%"=="0" goto mainEnd
+-
+-:fail
+-rem Set variable GRADLE_EXIT_CONSOLE if you need the _script_ return code instead of
+-rem the _cmd.exe /c_ return code!
+-if  not "" == "%GRADLE_EXIT_CONSOLE%" exit 1
+-exit /b 1
+-
+-:mainEnd
+-if "%OS%"=="Windows_NT" endlocal
+-
+-:omega
+Index: app/src/main/res/drawable/button_rounded.xml
+===================================================================
+--- app/src/main/res/drawable/button_rounded.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/res/drawable/button_rounded.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<shape xmlns:android="http://schemas.android.com/apk/res/android">
+-    <corners android:radius="16dp"/>
+-    <solid android:color="@android:color/holo_green_dark"/>
+-
+-</shape>
+\ No newline at end of file
+Index: app/src/main/java/com/example/campoapp/Respuesta.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/Respuesta.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/java/com/example/campoapp/Respuesta.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,21 +0,0 @@
+-package com.example.campoapp;
+-
+-public class Respuesta {
+-    private String cuestion, respuesta;
+-
+-    public Respuesta() {
+-    }
+-
+-    public Respuesta(String cuestion, String respuesta) {
+-        this.cuestion = cuestion;
+-        this.respuesta = respuesta;
+-    }
+-
+-    public String getCuestion() {
+-        return cuestion;
+-    }
+-
+-    public String getRespuesta() {
+-        return respuesta;
+-    }
+-}
+Index: app/src/main/res/drawable/button_border_rounded_.xml
+===================================================================
+--- app/src/main/res/drawable/button_border_rounded_.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/res/drawable/button_border_rounded_.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,9 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<shape xmlns:android="http://schemas.android.com/apk/res/android">
+-    <corners android:radius="16dp"/>
+-    <solid android:color="@android:color/white"/>
+-    <stroke
+-          android:width="2dp"
+-        android:color="@android:color/holo_green_dark"/>
+-
+-</shape>
+\ No newline at end of file
+Index: app/src/main/res/drawable/side_nav_bar.xml
+===================================================================
+--- app/src/main/res/drawable/side_nav_bar.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/res/drawable/side_nav_bar.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,9 +0,0 @@
+-<shape xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:shape="rectangle">
+-    <gradient
+-        android:angle="135"
+-        android:centerColor="#009688"
+-        android:endColor="#00695C"
+-        android:startColor="#4DB6AC"
+-        android:type="linear" />
+-</shape>
+\ No newline at end of file
+Index: .idea/jarRepositories.xml
+===================================================================
+--- .idea/jarRepositories.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ .idea/jarRepositories.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,25 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="RemoteRepositoriesConfiguration">
+-    <remote-repository>
+-      <option name="id" value="central" />
+-      <option name="name" value="Maven Central repository" />
+-      <option name="url" value="https://repo1.maven.org/maven2" />
+-    </remote-repository>
+-    <remote-repository>
+-      <option name="id" value="jboss.community" />
+-      <option name="name" value="JBoss Community repository" />
+-      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+-    </remote-repository>
+-    <remote-repository>
+-      <option name="id" value="BintrayJCenter" />
+-      <option name="name" value="BintrayJCenter" />
+-      <option name="url" value="https://jcenter.bintray.com/" />
+-    </remote-repository>
+-    <remote-repository>
+-      <option name="id" value="Google" />
+-      <option name="name" value="Google" />
+-      <option name="url" value="https://dl.google.com/dl/android/maven2/" />
+-    </remote-repository>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: app/src/main/res/drawable-v21/ic_menu_camera.xml
+===================================================================
+--- app/src/main/res/drawable-v21/ic_menu_camera.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/res/drawable-v21/ic_menu_camera.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,12 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="24dp"
+-    android:height="24dp"
+-    android:viewportWidth="24.0"
+-    android:viewportHeight="24.0">
+-    <path
+-        android:fillColor="#FF000000"
+-        android:pathData="M12,12m-3.2,0a3.2,3.2 0,1 1,6.4 0a3.2,3.2 0,1 1,-6.4 0" />
+-    <path
+-        android:fillColor="#FF000000"
+-        android:pathData="M9,2L7.17,4H4c-1.1,0 -2,0.9 -2,2v12c0,1.1 0.9,2 2,2h16c1.1,0 2,-0.9 2,-2V6c0,-1.1 -0.9,-2 -2,-2h-3.17L15,2H9zm3,15c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5z" />
+-</vector>
+Index: app/src/main/res/navigation/mobile_navigation.xml
+===================================================================
+--- app/src/main/res/navigation/mobile_navigation.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/res/navigation/mobile_navigation.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,25 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:id="@+id/mobile_navigation"
+-    app:startDestination="@+id/nav_home">
+-
+-    <fragment
+-        android:id="@+id/nav_home"
+-        android:name="com.example.campoapp.ui.home.HomeFragment"
+-        android:label="@string/menu_home"
+-        tools:layout="@layout/fragment_home" />
+-
+-    <fragment
+-        android:id="@+id/nav_gallery"
+-        android:name="com.example.campoapp.ui.gallery.GalleryFragment"
+-        android:label="@string/menu_gallery"
+-        tools:layout="@layout/fragment_gallery" />
+-
+-    <fragment
+-        android:id="@+id/nav_slideshow"
+-        android:name="com.example.campoapp.ui.slideshow.SlideshowFragment"
+-        android:label="@string/menu_slideshow"
+-        tools:layout="@layout/fragment_slideshow" />
+-</navigation>
+\ No newline at end of file
+Index: app/src/main/res/values/dimens.xml
+===================================================================
+--- app/src/main/res/values/dimens.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/res/values/dimens.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,8 +0,0 @@
+-<resources>
+-    <!-- Default screen margins, per the Android Design guidelines. -->
+-    <dimen name="activity_horizontal_margin">16dp</dimen>
+-    <dimen name="activity_vertical_margin">16dp</dimen>
+-    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+-    <dimen name="nav_header_height">176dp</dimen>
+-    <dimen name="fab_margin">16dp</dimen>
+-</resources>
+\ No newline at end of file
+Index: app/src/androidTest/java/com/example/campoapp/ExampleInstrumentedTest.java
+===================================================================
+--- app/src/androidTest/java/com/example/campoapp/ExampleInstrumentedTest.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/androidTest/java/com/example/campoapp/ExampleInstrumentedTest.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,26 +0,0 @@
+-package com.example.campoapp;
+-
+-import android.content.Context;
+-
+-import androidx.test.platform.app.InstrumentationRegistry;
+-import androidx.test.ext.junit.runners.AndroidJUnit4;
+-
+-import org.junit.Test;
+-import org.junit.runner.RunWith;
+-
+-import static org.junit.Assert.*;
+-
+-/**
+- * Instrumented test, which will execute on an Android device.
+- *
+- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
+- */
+-@RunWith(AndroidJUnit4.class)
+-public class ExampleInstrumentedTest {
+-    @Test
+-    public void useAppContext() {
+-        // Context of the app under test.
+-        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
+-        assertEquals("com.example.campoapp", appContext.getPackageName());
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/java/com/example/campoapp/ui/slideshow/SlideshowFragment.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/ui/slideshow/SlideshowFragment.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/java/com/example/campoapp/ui/slideshow/SlideshowFragment.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,35 +0,0 @@
+-package com.example.campoapp.ui.slideshow;
+-
+-import android.os.Bundle;
+-import android.view.LayoutInflater;
+-import android.view.View;
+-import android.view.ViewGroup;
+-import android.widget.TextView;
+-
+-import androidx.annotation.NonNull;
+-import androidx.annotation.Nullable;
+-import androidx.fragment.app.Fragment;
+-import androidx.lifecycle.Observer;
+-import androidx.lifecycle.ViewModelProviders;
+-
+-import com.example.campoapp.R;
+-
+-public class SlideshowFragment extends Fragment {
+-
+-    private SlideshowViewModel slideshowViewModel;
+-
+-    public View onCreateView(@NonNull LayoutInflater inflater,
+-                             ViewGroup container, Bundle savedInstanceState) {
+-        slideshowViewModel =
+-                ViewModelProviders.of(this).get(SlideshowViewModel.class);
+-        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
+-        final TextView textView = root.findViewById(R.id.text_slideshow);
+-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+-            @Override
+-            public void onChanged(@Nullable String s) {
+-                textView.setText(s);
+-            }
+-        });
+-        return root;
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/res/values/styles.xml
+===================================================================
+--- app/src/main/res/values/styles.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/res/values/styles.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,19 +0,0 @@
+-<resources>
+-    <!-- Base application theme. -->
+-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+-        <!-- Customize your theme here. -->
+-        <item name="colorPrimary">@color/colorPrimary</item>
+-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+-        <item name="colorAccent">@color/colorAccent</item>
+-    </style>
+-
+-    <style name="NoActionBar">
+-        <item name="windowActionBar">false</item>
+-        <item name="windowNoTitle">true</item>
+-    </style>
+-
+-    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+-
+-    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+-
+-</resources>
+\ No newline at end of file
+Index: app/src/main/java/com/example/campoapp/ui/home/HomeViewModel.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/ui/home/HomeViewModel.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/java/com/example/campoapp/ui/home/HomeViewModel.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,19 +0,0 @@
+-package com.example.campoapp.ui.home;
+-
+-import androidx.lifecycle.LiveData;
+-import androidx.lifecycle.MutableLiveData;
+-import androidx.lifecycle.ViewModel;
+-
+-public class HomeViewModel extends ViewModel {
+-
+-    private MutableLiveData<String> mText;
+-
+-    public HomeViewModel() {
+-        mText = new MutableLiveData<>();
+-        mText.setValue("This is home fragment");
+-    }
+-
+-    public LiveData<String> getText() {
+-        return mText;
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/res/drawable-v24/ic_launcher_foreground.xml
+===================================================================
+--- app/src/main/res/drawable-v24/ic_launcher_foreground.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/res/drawable-v24/ic_launcher_foreground.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,30 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:aapt="http://schemas.android.com/aapt"
+-    android:width="108dp"
+-    android:height="108dp"
+-    android:viewportWidth="108"
+-    android:viewportHeight="108">
+-    <path android:pathData="M31,63.928c0,0 6.4,-11 12.1,-13.1c7.2,-2.6 26,-1.4 26,-1.4l38.1,38.1L107,108.928l-32,-1L31,63.928z">
+-        <aapt:attr name="android:fillColor">
+-            <gradient
+-                android:endX="85.84757"
+-                android:endY="92.4963"
+-                android:startX="42.9492"
+-                android:startY="49.59793"
+-                android:type="linear">
+-                <item
+-                    android:color="#44000000"
+-                    android:offset="0.0" />
+-                <item
+-                    android:color="#00000000"
+-                    android:offset="1.0" />
+-            </gradient>
+-        </aapt:attr>
+-    </path>
+-    <path
+-        android:fillColor="#FFFFFF"
+-        android:fillType="nonZero"
+-        android:pathData="M65.3,45.828l3.8,-6.6c0.2,-0.4 0.1,-0.9 -0.3,-1.1c-0.4,-0.2 -0.9,-0.1 -1.1,0.3l-3.9,6.7c-6.3,-2.8 -13.4,-2.8 -19.7,0l-3.9,-6.7c-0.2,-0.4 -0.7,-0.5 -1.1,-0.3C38.8,38.328 38.7,38.828 38.9,39.228l3.8,6.6C36.2,49.428 31.7,56.028 31,63.928h46C76.3,56.028 71.8,49.428 65.3,45.828zM43.4,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2c-0.3,-0.7 -0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C45.3,56.528 44.5,57.328 43.4,57.328L43.4,57.328zM64.6,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2s-0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C66.5,56.528 65.6,57.328 64.6,57.328L64.6,57.328z"
+-        android:strokeWidth="1"
+-        android:strokeColor="#00000000" />
+-</vector>
+\ No newline at end of file
+Index: app/proguard-rules.pro
+===================================================================
+--- app/proguard-rules.pro	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/proguard-rules.pro	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,21 +0,0 @@
+-# Add project specific ProGuard rules here.
+-# You can control the set of applied configuration files using the
+-# proguardFiles setting in build.gradle.
+-#
+-# For more details, see
+-#   http://developer.android.com/guide/developing/tools/proguard.html
+-
+-# If your project uses WebView with JS, uncomment the following
+-# and specify the fully qualified class name to the JavaScript interface
+-# class:
+-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+-#   public *;
+-#}
+-
+-# Uncomment this to preserve the line number information for
+-# debugging stack traces.
+-#-keepattributes SourceFile,LineNumberTable
+-
+-# If you keep the line number information, uncomment this to
+-# hide the original source file name.
+-#-renamesourcefileattribute SourceFile
+\ No newline at end of file
+Index: settings.gradle
+===================================================================
+--- settings.gradle	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ settings.gradle	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,2 +0,0 @@
+-include ':app'
+-rootProject.name = "CampoApp"
+\ No newline at end of file
+Index: app/src/main/java/com/example/campoapp/ui/gallery/GalleryViewModel.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/ui/gallery/GalleryViewModel.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/java/com/example/campoapp/ui/gallery/GalleryViewModel.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,19 +0,0 @@
+-package com.example.campoapp.ui.gallery;
+-
+-import androidx.lifecycle.LiveData;
+-import androidx.lifecycle.MutableLiveData;
+-import androidx.lifecycle.ViewModel;
+-
+-public class GalleryViewModel extends ViewModel {
+-
+-    private MutableLiveData<String> mText;
+-
+-    public GalleryViewModel() {
+-        mText = new MutableLiveData<>();
+-        mText.setValue("This is gallery fragment");
+-    }
+-
+-    public LiveData<String> getText() {
+-        return mText;
+-    }
+-}
+\ No newline at end of file
+Index: .idea/codeStyles/Project.xml
+===================================================================
+--- .idea/codeStyles/Project.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ .idea/codeStyles/Project.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,116 +0,0 @@
+-<component name="ProjectCodeStyleConfiguration">
+-  <code_scheme name="Project" version="173">
+-    <codeStyleSettings language="XML">
+-      <indentOptions>
+-        <option name="CONTINUATION_INDENT_SIZE" value="4" />
+-      </indentOptions>
+-      <arrangement>
+-        <rules>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>xmlns:android</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>xmlns:.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*:id</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*:name</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>name</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>style</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>ANDROID_ATTRIBUTE_ORDER</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>.*</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-        </rules>
+-      </arrangement>
+-    </codeStyleSettings>
+-  </code_scheme>
+-</component>
+\ No newline at end of file
+Index: app/src/main/java/com/example/campoapp/MenuSlideActivity.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/MenuSlideActivity.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/java/com/example/campoapp/MenuSlideActivity.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,63 +0,0 @@
+-package com.example.campoapp;
+-
+-import android.os.Bundle;
+-import android.view.View;
+-import android.view.Menu;
+-
+-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+-import com.google.android.material.snackbar.Snackbar;
+-import com.google.android.material.navigation.NavigationView;
+-
+-import androidx.navigation.NavController;
+-import androidx.navigation.Navigation;
+-import androidx.navigation.ui.AppBarConfiguration;
+-import androidx.navigation.ui.NavigationUI;
+-import androidx.drawerlayout.widget.DrawerLayout;
+-import androidx.appcompat.app.AppCompatActivity;
+-import androidx.appcompat.widget.Toolbar;
+-
+-public class MenuSlideActivity extends AppCompatActivity {
+-
+-    private AppBarConfiguration mAppBarConfiguration;
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_menu_slide);
+-        Toolbar toolbar = findViewById(R.id.toolbar);
+-        setSupportActionBar(toolbar);
+-        FloatingActionButton fab = findViewById(R.id.fab);
+-        fab.setOnClickListener(new View.OnClickListener() {
+-            @Override
+-            public void onClick(View view) {
+-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+-                        .setAction("Action", null).show();
+-            }
+-        });
+-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+-        NavigationView navigationView = findViewById(R.id.nav_view);
+-        // Passing each menu ID as a set of Ids because each
+-        // menu should be considered as top level destinations.
+-        mAppBarConfiguration = new AppBarConfiguration.Builder(
+-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+-                .setDrawerLayout(drawer)
+-                .build();
+-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+-        NavigationUI.setupWithNavController(navigationView, navController);
+-    }
+-
+-    @Override
+-    public boolean onCreateOptionsMenu(Menu menu) {
+-        // Inflate the menu; this adds items to the action bar if it is present.
+-        getMenuInflater().inflate(R.menu.menu_slide, menu);
+-        return true;
+-    }
+-
+-    @Override
+-    public boolean onSupportNavigateUp() {
+-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+-        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
+-                || super.onSupportNavigateUp();
+-    }
+-}
+\ No newline at end of file
+Index: gradle.properties
+===================================================================
+--- gradle.properties	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ gradle.properties	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,19 +0,0 @@
+-# Project-wide Gradle settings.
+-# IDE (e.g. Android Studio) users:
+-# Gradle settings configured through the IDE *will override*
+-# any settings specified in this file.
+-# For more details on how to configure your build environment visit
+-# http://www.gradle.org/docs/current/userguide/build_environment.html
+-# Specifies the JVM arguments used for the daemon process.
+-# The setting is particularly useful for tweaking memory settings.
+-org.gradle.jvmargs=-Xmx2048m
+-# When configured, Gradle will run in incubating parallel mode.
+-# This option should only be used with decoupled projects. More details, visit
+-# http://www.gradle.org/docs/current/userguide/multi_project_builds.html#sec:decoupled_projects
+-# org.gradle.parallel=true
+-# AndroidX package structure to make it clearer which packages are bundled with the
+-# Android operating system, and which are packaged with your app"s APK
+-# https://developer.android.com/topic/libraries/support-library/androidx-rn
+-android.useAndroidX=true
+-# Automatically convert third-party libraries to use AndroidX
+-android.enableJetifier=true
+\ No newline at end of file
+Index: app/src/main/java/com/example/campoapp/AdministradorSQLite.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/AdministradorSQLite.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/java/com/example/campoapp/AdministradorSQLite.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,25 +0,0 @@
+-package com.example.campoapp;
+-
+-import android.content.Context;
+-import android.database.sqlite.SQLiteDatabase;
+-import android.database.sqlite.SQLiteOpenHelper;
+-
+-import androidx.annotation.Nullable;
+-
+-public class AdministradorSQLite extends SQLiteOpenHelper {
+-
+-
+-    public AdministradorSQLite(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+-        super(context, name, factory, version);
+-    }
+-
+-    @Override
+-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+-        sqLiteDatabase.execSQL("create table articulos(codigo int primary key, nombre text, precio real )");
+-
+-    }
+-
+-    @Override
+-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+-    }
+-}
+Index: app/src/main/java/com/example/campoapp/ui/slideshow/SlideshowViewModel.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/ui/slideshow/SlideshowViewModel.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/java/com/example/campoapp/ui/slideshow/SlideshowViewModel.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,19 +0,0 @@
+-package com.example.campoapp.ui.slideshow;
+-
+-import androidx.lifecycle.LiveData;
+-import androidx.lifecycle.MutableLiveData;
+-import androidx.lifecycle.ViewModel;
+-
+-public class SlideshowViewModel extends ViewModel {
+-
+-    private MutableLiveData<String> mText;
+-
+-    public SlideshowViewModel() {
+-        mText = new MutableLiveData<>();
+-        mText.setValue("This is slideshow fragment");
+-    }
+-
+-    public LiveData<String> getText() {
+-        return mText;
+-    }
+-}
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ .idea/vcs.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: app/src/main/java/com/example/campoapp/ui/gallery/GalleryFragment.java
+===================================================================
+--- app/src/main/java/com/example/campoapp/ui/gallery/GalleryFragment.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/java/com/example/campoapp/ui/gallery/GalleryFragment.java	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,35 +0,0 @@
+-package com.example.campoapp.ui.gallery;
+-
+-import android.os.Bundle;
+-import android.view.LayoutInflater;
+-import android.view.View;
+-import android.view.ViewGroup;
+-import android.widget.TextView;
+-
+-import androidx.annotation.NonNull;
+-import androidx.annotation.Nullable;
+-import androidx.fragment.app.Fragment;
+-import androidx.lifecycle.Observer;
+-import androidx.lifecycle.ViewModelProviders;
+-
+-import com.example.campoapp.R;
+-
+-public class GalleryFragment extends Fragment {
+-
+-    private GalleryViewModel galleryViewModel;
+-
+-    public View onCreateView(@NonNull LayoutInflater inflater,
+-                             ViewGroup container, Bundle savedInstanceState) {
+-        galleryViewModel =
+-                ViewModelProviders.of(this).get(GalleryViewModel.class);
+-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
+-        final TextView textView = root.findViewById(R.id.text_gallery);
+-        galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+-            @Override
+-            public void onChanged(@Nullable String s) {
+-                textView.setText(s);
+-            }
+-        });
+-        return root;
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/res/values/drawables.xml
+===================================================================
+--- app/src/main/res/values/drawables.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/res/values/drawables.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
+@@ -1,8 +0,0 @@
+-<resources xmlns:android="http://schemas.android.com/apk/res/android">
+-    <item name="ic_menu_camera" type="drawable">@android:drawable/ic_menu_camera</item>
+-    <item name="ic_menu_gallery" type="drawable">@android:drawable/ic_menu_gallery</item>
+-    <item name="ic_menu_slideshow" type="drawable">@android:drawable/ic_menu_slideshow</item>
+-    <item name="ic_menu_manage" type="drawable">@android:drawable/ic_menu_manage</item>
+-    <item name="ic_menu_share" type="drawable">@android:drawable/ic_menu_share</item>
+-    <item name="ic_menu_send" type="drawable">@android:drawable/ic_menu_send</item>
+-</resources>
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <string name=\"app_name\">CampoApp</string>\r\n    <string name=\"Blogin\">Login</string>\r\n    <string name=\"Bregistro\">Registrate</string>\r\n    <string name=\"Email\">Digite Email</string>\r\n    <string name=\"Contra\">Digite Contraseña</string>\r\n    <string name=\"EmailR\">Digite Email</string>\r\n    <string name=\"ContraR\">Digite Contraseña</string>\r\n    <string name=\"cc\">Digite Cédula</string>\r\n    <string name=\"Nombre\">Digite Nombre</string>\r\n    <string name=\"Profesion\">Digite Profesión</string>\r\n    <string name=\"Celular\">Digite Celular</string>\r\n    <string name=\"Registar\">Registrar</string>\r\n    <string name=\"Escuchar\">Escuchando Pregunta</string>\r\n    <string name=\"Responder\">Preparando Respuesta</string>\r\n\r\n\r\n    <string name=\"title_activity_menu_slide\">MenuSlideActivity</string>\r\n    <string name=\"navigation_drawer_open\">Open navigation drawer</string>\r\n    <string name=\"navigation_drawer_close\">Close navigation drawer</string>\r\n    <string name=\"nav_header_title\">Android Studio</string>\r\n    <string name=\"nav_header_subtitle\">android.studio@android.com</string>\r\n    <string name=\"nav_header_desc\">Navigation header</string>\r\n    <string name=\"action_settings\">Settings</string>\r\n\r\n\r\n    <string name=\"menu_home\">Home</string>\r\n    <string name=\"menu_gallery\">Gallery</string>\r\n    <string name=\"menu_slideshow\">Slideshow</string>\r\n    <string name=\"title_activity_login\">LoginActivity</string>\r\n    <string name=\"prompt_email\">Email</string>\r\n    <string name=\"prompt_password\">Password</string>\r\n    <string name=\"action_sign_in\">Sign in or register</string>\r\n    <string name=\"action_sign_in_short\">Sign in</string>\r\n    <string name=\"welcome\">\"Welcome !\"</string>\r\n    <string name=\"invalid_username\">Not a valid username</string>\r\n    <string name=\"invalid_password\">Password must be >5 characters</string>\r\n    <string name=\"login_failed\">\"Login failed\"</string>\r\n\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/strings.xml	(revision e6ae49178752c3600045c35a095d2a9c65450632)
++++ app/src/main/res/values/strings.xml	(date 1602790351521)
+@@ -9,7 +9,7 @@
+     <string name="cc">Digite Cédula</string>
+     <string name="Nombre">Digite Nombre</string>
+     <string name="Profesion">Digite Profesión</string>
+-    <string name="Celular">Digite Celular</string>
++    <string name="Direccion">Digite Dirección</string>
+     <string name="Registar">Registrar</string>
+     <string name="Escuchar">Escuchando Pregunta</string>
+     <string name="Responder">Preparando Respuesta</string>
+@@ -23,18 +23,8 @@
+     <string name="nav_header_desc">Navigation header</string>
+     <string name="action_settings">Settings</string>
+ 
+-
+     <string name="menu_home">Home</string>
+     <string name="menu_gallery">Gallery</string>
+     <string name="menu_slideshow">Slideshow</string>
+-    <string name="title_activity_login">LoginActivity</string>
+-    <string name="prompt_email">Email</string>
+-    <string name="prompt_password">Password</string>
+-    <string name="action_sign_in">Sign in or register</string>
+-    <string name="action_sign_in_short">Sign in</string>
+-    <string name="welcome">"Welcome !"</string>
+-    <string name="invalid_username">Not a valid username</string>
+-    <string name="invalid_password">Password must be >5 characters</string>
+-    <string name="login_failed">"Login failed"</string>
+ 
+ </resources>
+\ No newline at end of file
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_34_PM__Default_Changelist_1.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_34_PM__Default_Changelist_1.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_13_PM__Default_Changelist_1.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_13_PM__Default_Changelist_1.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_12_35_AM__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_12_35_AM__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_05_PM__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_05_PM__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_13_PM__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_13_PM__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_17_PM__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_17_PM__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_34_PM__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_34_PM__Default_Changelist_.xml

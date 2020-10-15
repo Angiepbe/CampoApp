@@ -221,7 +221,6 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="15dp"
                         android:background="@drawable/fondoverdeclaro"
-                        android:onClick="AsisVirtual"
                         android:scaleType="fitCenter"
                         app:srcCompat="@drawable/asistentevirtual" />
 
