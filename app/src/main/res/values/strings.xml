@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">CampoApp</string>
+    <string name="Blogin">Login</string>
+    <string name="Bregistro">Registrate</string>
+    <string name="Email">Digite Email</string>
+    <string name="Contra">Digite Contraseña</string>
+    <string name="EmailR">Digite Email</string>
+    <string name="ContraR">Digite Contraseña</string>
+    <string name="cc">Digite Cédula</string>
+    <string name="Nombre">Digite Nombre</string>
+    <string name="Profesion">Digite Profesión</string>
+    <string name="Direccion">Digite Dirección</string>
+    <string name="Registar">Registrar</string>
+    <string name="Escuchar">Escuchando Pregunta</string>
+    <string name="Responder">Preparando Respuesta</string>
+
+
+    <string name="title_activity_menu_slide">MenuSlideActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+</resources>
