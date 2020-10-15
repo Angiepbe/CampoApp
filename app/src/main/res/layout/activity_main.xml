@@ -43,49 +43,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ETEmail" />
 
-    <LinearLayout
-        android:layout_width="210dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3">
-
-        <ImageButton
-            android:id="@+id/imageButton5"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/fondoverdeclaro"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/facebook" />
-
-        <ImageButton
-            android:id="@+id/imageButton7"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/fondoverdeclaro"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/wa" />
-
-        <ImageButton
-            android:id="@+id/imageButton6"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/fondoverdeclaro"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/gmail" />
-
-        <ImageButton
-            android:id="@+id/imageButton8"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/fondoverdeclaro"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/ig" />
-    </LinearLayout>
-
     <Button
         android:id="@+id/button3"
         android:layout_width="239dp"
@@ -111,5 +68,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ETPass" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/fondoverdeclaro"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/gmail" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/fondoverdeclaro"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/facebook" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
