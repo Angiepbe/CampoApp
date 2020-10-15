@@ -9,12 +9,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class Registro extends AppCompatActivity {
-    private FirebaseAuth mAuth;
-    private EditText ECC, ENombre, Eprofesion, ECel, Email, Econtra;
+    private EditText ECC, ENombre, Eprofesion, EDir, Email, Econtra;
 
 
     @Override
@@ -24,10 +21,9 @@ public class Registro extends AppCompatActivity {
         ECC=(EditText) findViewById(R.id.IDcc);
         ENombre=(EditText) findViewById(R.id.IDn);
         Eprofesion=(EditText) findViewById(R.id.IDp);
-        ECel=(EditText) findViewById(R.id.IDd);
+        EDir=(EditText) findViewById(R.id.IDd);
         Email=(EditText) findViewById(R.id.IDe);
         Econtra=(EditText) findViewById(R.id.IDc);
-        mAuth = FirebaseAuth.getInstance();
 
     }
 
@@ -39,7 +35,7 @@ public class Registro extends AppCompatActivity {
         String cedula = ECC.getText().toString();
         String nombre = ENombre.getText().toString();
         String profesion = Eprofesion.getText().toString();
-        String direccion = ECel.getText().toString();
+        String direccion = EDir.getText().toString();
         String email = Email.getText().toString();
         String contra = Econtra.getText().toString();
 
@@ -58,7 +54,7 @@ public class Registro extends AppCompatActivity {
             ECC.setText("");
             ENombre.setText("");
             Eprofesion.setText("");
-            ECel.setText("");
+            EDir.setText("");
             Email.setText("");
             Econtra.setText("");
             Toast.makeText(this, "Usuario Registrado",Toast.LENGTH_SHORT).show();
