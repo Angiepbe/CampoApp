@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "789351875335",
+    "firebase_url": "https://campoapp-ddf2d.firebaseio.com",
+    "project_id": "campoapp-ddf2d",
+    "storage_bucket": "campoapp-ddf2d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789351875335:android:7a17fce3eb6753aa687ba2",
+        "android_client_info": {
+          "package_name": "com.example.campoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "789351875335-t5sv23ip859hkaiq654o3jg375gmest9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzUGKFeXJbkZ0wDmuMUAwkph6hsbKt7ec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "789351875335-t5sv23ip859hkaiq654o3jg375gmest9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
