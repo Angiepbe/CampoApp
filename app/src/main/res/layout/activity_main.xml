@@ -5,64 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondoverdeclaro"
-    tools:context=".MainActivity"><![CDATA[
-
-
-    tools:ignore="MissingConstraints" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    ]]>
-
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/sign_in_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="68dp"
-        android:layout_marginBottom="244dp"
-
-        android:contentDescription="@string/Blogin"
-        app:barrierMargin="@dimen/activity_horizontal_margin"
-        app:buttonSize="standard"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/gmail" />
+    tools:context=".MainActivity" >
 
     <ImageView
         android:id="@+id/imageView"
@@ -127,11 +70,26 @@
         app:layout_constraintTop_toBottomOf="@+id/ETPass" />
 
     <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/fondoverdeclaro"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/gmail" />
+
+    <ImageButton
         android:id="@+id/imageButton5"
-        android:layout_width="105dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginLeft="84dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/fondoverdeclaro"
         android:scaleType="fitCenter"

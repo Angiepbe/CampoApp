@@ -1,0 +1,21 @@
+Index: app/src/main/res/drawable-v24/menu/principal.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/drawable-v24/menu/principal.xml	(date 1602785647956)
++++ app/src/main/res/drawable-v24/menu/principal.xml	(date 1602785647956)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="utf-8"?>
++<menu xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto">
++    <item android:id="@+id/action_settings"
++        android:title="@string/action_settings"
++        android:orderInCategory="100"
++        app:showAsAction="never" />
++</menu>
+\ No newline at end of file
+diff --git app/src/main/res/menu/main_menu.xml app/src/main/res/drawable-v24/menu/main_menu.xml
+rename from app/src/main/res/menu/main_menu.xml
+rename to app/src/main/res/drawable-v24/menu/main_menu.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_12_35_AM__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_12_35_AM__Default_Changelist_.xml
