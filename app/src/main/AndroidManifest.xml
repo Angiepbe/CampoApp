@@ -11,10 +11,6 @@
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         <activity android:name=".MenuprincipalActivity"></activity>
         <activity android:name=".AsistenteVirtual" />
-        <activity
-            android:name=".MenuSlideActivity"
-            android:label="@string/title_activity_menu_slide"
-            android:theme="@style/NoActionBar" />
         <activity android:name=".Registro" />
         <activity android:name=".MainActivity">
             <intent-filter>
