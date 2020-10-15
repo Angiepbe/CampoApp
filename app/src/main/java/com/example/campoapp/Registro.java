@@ -1,83 +1,71 @@
 package com.example.campoapp;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Registro extends AppCompatActivity {
     private FirebaseAuth mAuth;
-    private EditText  email, password,password2;
+    private EditText ECC, ENombre, Eprofesion, ECel, Email, Econtra;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
-
-        email=(EditText) findViewById(R.id.IDe);
-        password=(EditText) findViewById(R.id.IDc);
-        password2=(EditText) findViewById(R.id.IDc2);
+        ECC=(EditText) findViewById(R.id.IDcc);
+        ENombre=(EditText) findViewById(R.id.IDn);
+        Eprofesion=(EditText) findViewById(R.id.IDp);
+        ECel=(EditText) findViewById(R.id.IDd);
+        Email=(EditText) findViewById(R.id.IDe);
+        Econtra=(EditText) findViewById(R.id.IDc);
         mAuth = FirebaseAuth.getInstance();
 
     }
 
-    public  void  Registrar(View view){
+    //Metodo de registrar
+    public void Registrar (View view ){
+        AdministradorSQLite adm = new AdministradorSQLite(this, "Empresa",null, 1 );
+        SQLiteDatabase BaseDatos= adm.getWritableDatabase();
 
-        //Metodo de registrar
-        if(password.getText().toString().equals(password2.getText().toString())){
-            mAuth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString())
-                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()) {
-                                // Sign in success, update UI with the signed-in user's information
-                                //Log.d(TAG, "createUserWithEmail:success");
-                                FirebaseUser user = mAuth.getCurrentUser();
-                                Toast.makeText(getApplicationContext(),"Autenticación Exitosa",Toast.LENGTH_SHORT).show();
-                                Intent i=new Intent(getApplicationContext(),MainActivity.class);
-                                startActivity(i);
-                               // updateUI(user);
-                            } else {
-                                // If sign in fails, display a message to the user.
-                               // Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                                Toast.makeText(getApplicationContext(),"Autenticación Fallida",Toast.LENGTH_SHORT).show();
-                                //updateUI(null);
-                            }
+        String cedula = ECC.getText().toString();
+        String nombre = ENombre.getText().toString();
+        String profesion = Eprofesion.getText().toString();
+        String direccion = ECel.getText().toString();
+        String email = Email.getText().toString();
+        String contra = Econtra.getText().toString();
 
-                            // ...
-                        }
-                    });
-        }else {
-            Toast.makeText(this,"Las contraseñas no coinciden",Toast.LENGTH_SHORT).show();
+        //Verificar Informacion
+        if(!cedula.isEmpty() && !nombre.isEmpty() && !profesion.isEmpty() && !direccion.isEmpty() && !email.isEmpty() && !contra.isEmpty()  ){
+            ContentValues registro=new ContentValues();//Organizar informacion
+            registro.put("cedula",cedula);
+            registro.put("nombre",nombre);
+            registro.put("profesion",profesion);
+            registro.put("direccion",direccion);
+            registro.put("email",email);
+            registro.put("contraseña",contra);
+            BaseDatos.insert("usuarios",null,registro);
+            BaseDatos.close();
+
+            ECC.setText("");
+            ENombre.setText("");
+            Eprofesion.setText("");
+            ECel.setText("");
+            Email.setText("");
+            Econtra.setText("");
+            Toast.makeText(this, "Usuario Registrado",Toast.LENGTH_SHORT).show();
+
+        } else {
+            Toast.makeText(this, "Digitar todos los campos",Toast.LENGTH_SHORT).show();
         }
-
-
-
-    }
-
-
-
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        //updateUI(currentUser);
     }
 
     public void Next (View view ){
