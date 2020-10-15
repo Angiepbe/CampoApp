@@ -1,0 +1,55 @@
+Index: app/src/main/java/com/example/campoapp/data/home/HomeFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.campoapp.ui.home;\r\n\r\nimport android.os.Bundle;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.TextView;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.annotation.Nullable;\r\nimport androidx.fragment.app.Fragment;\r\nimport androidx.lifecycle.Observer;\r\nimport androidx.lifecycle.ViewModelProviders;\r\n\r\nimport com.example.campoapp.R;\r\n\r\npublic class HomeFragment extends Fragment {\r\n\r\n    private HomeViewModel homeViewModel;\r\n\r\n    public View onCreateView(@NonNull LayoutInflater inflater,\r\n                             ViewGroup container, Bundle savedInstanceState) {\r\n        homeViewModel =\r\n                ViewModelProviders.of(this).get(HomeViewModel.class);\r\n        View root = inflater.inflate(R.layout.fragment_home, container, false);\r\n        final TextView textView = root.findViewById(R.id.text_home);\r\n        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {\r\n            @Override\r\n            public void onChanged(@Nullable String s) {\r\n                textView.setText(s);\r\n            }\r\n        });\r\n        return root;\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/campoapp/data/home/HomeFragment.java	(revision 4449598b7608e97337141ba42ffd7b4c7b66e08e)
++++ app/src/main/java/com/example/campoapp/data/home/HomeFragment.java	(date 1602788997705)
+@@ -16,12 +16,12 @@
+ 
+ public class HomeFragment extends Fragment {
+ 
+-    private HomeViewModel homeViewModel;
++    private com.example.campoapp.ui.home.HomeViewModel homeViewModel;
+ 
+     public View onCreateView(@NonNull LayoutInflater inflater,
+                              ViewGroup container, Bundle savedInstanceState) {
+         homeViewModel =
+-                ViewModelProviders.of(this).get(HomeViewModel.class);
++                ViewModelProviders.of(this).get(com.example.campoapp.ui.home.HomeViewModel.class);
+         View root = inflater.inflate(R.layout.fragment_home, container, false);
+         final TextView textView = root.findViewById(R.id.text_home);
+         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+Index: app/src/main/res/values/ids.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<resources>\r\n    <item name=\"text_gallery\" type=\"id\" />\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/ids.xml	(revision 4449598b7608e97337141ba42ffd7b4c7b66e08e)
++++ app/src/main/res/values/ids.xml	(date 1602788997709)
+@@ -1,4 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+     <item name="text_gallery" type="id" />
++    <item name="text_home" type="id" />
+ </resources>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_home.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_home.xml	(date 1602788966448)
++++ app/src/main/res/layout/fragment_home.xml	(date 1602788966448)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout
++    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
++    android:layout_height="match_parent">
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file

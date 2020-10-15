@@ -1,0 +1,37 @@
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <string name=\"app_name\">CampoApp</string>\r\n    <string name=\"Blogin\">Login</string>\r\n    <string name=\"Bregistro\">Registrate</string>\r\n    <string name=\"Email\">Digite Email</string>\r\n    <string name=\"Contra\">Digite Contraseña</string>\r\n    <string name=\"EmailR\">Digite Email</string>\r\n    <string name=\"ContraR\">Digite Contraseña</string>\r\n    <string name=\"cc\">Digite Cédula</string>\r\n    <string name=\"Nombre\">Digite Nombre</string>\r\n    <string name=\"Profesion\">Digite Profesión</string>\r\n    <string name=\"Celular\">Digite Celular</string>\r\n    <string name=\"Registar\">Registrar</string>\r\n    <string name=\"Escuchar\">Escuchando Pregunta</string>\r\n    <string name=\"Responder\">Preparando Respuesta</string>\r\n\r\n\r\n    <string name=\"title_activity_menu_slide\">MenuSlideActivity</string>\r\n    <string name=\"navigation_drawer_open\">Open navigation drawer</string>\r\n    <string name=\"navigation_drawer_close\">Close navigation drawer</string>\r\n    <string name=\"nav_header_title\">Android Studio</string>\r\n    <string name=\"nav_header_subtitle\">android.studio@android.com</string>\r\n    <string name=\"nav_header_desc\">Navigation header</string>\r\n    <string name=\"action_settings\">Settings</string>\r\n\r\n\r\n    <string name=\"menu_home\">Home</string>\r\n    <string name=\"menu_gallery\">Gallery</string>\r\n    <string name=\"menu_slideshow\">Slideshow</string>\r\n    <string name=\"title_activity_login\">LoginActivity</string>\r\n    <string name=\"prompt_email\">Email</string>\r\n    <string name=\"prompt_password\">Password</string>\r\n    <string name=\"action_sign_in\">Sign in or register</string>\r\n    <string name=\"action_sign_in_short\">Sign in</string>\r\n    <string name=\"welcome\">\"Welcome !\"</string>\r\n    <string name=\"invalid_username\">Not a valid username</string>\r\n    <string name=\"invalid_password\">Password must be >5 characters</string>\r\n    <string name=\"login_failed\">\"Login failed\"</string>\r\n\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/strings.xml	(revision 0285758c8c8efdc51c6708e704950accfadf0b74)
++++ app/src/main/res/values/strings.xml	(date 1602789415674)
+@@ -36,5 +36,6 @@
+     <string name="invalid_username">Not a valid username</string>
+     <string name="invalid_password">Password must be >5 characters</string>
+     <string name="login_failed">"Login failed"</string>
++    <string name="title_activity_principal">PrincipalActivity</string>
+ 
+ </resources>
+\ No newline at end of file
+Index: app/src/main/res/menu/principal.xml
+===================================================================
+--- app/src/main/res/menu/principal.xml	(date 1602789415884)
++++ app/src/main/res/menu/principal.xml	(date 1602789415884)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="utf-8"?>
++<menu xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto">
++    <item android:id="@+id/action_settings"
++        android:title="@string/action_settings"
++        android:orderInCategory="100"
++        app:showAsAction="never" />
++</menu>
+\ No newline at end of file
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_34_PM__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_34_PM__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_34_PM__Default_Changelist_1.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_34_PM__Default_Changelist_1.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_05_PM__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_05_PM__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_13_PM__Default_Changelist_1.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_13_PM__Default_Changelist_1.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_13_PM__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_13_PM__Default_Changelist_.xml
+diff --git .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_17_PM__Default_Changelist_.xml .idea/shelf/Uncommitted_changes_before_Checkout_at_15_10_2020_1_17_PM__Default_Changelist_.xml
